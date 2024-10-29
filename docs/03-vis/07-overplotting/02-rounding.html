@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"classes":"","read-only":"false","fig-height":"3.7","warning":"true","results":"markup","fig-width":"6","output":"true","out-height":"","context":"interactive","editor-max-height":"","fig-cap":"","editor-font-scale":"0.85","comment":"","message":"true","label":"unnamed-chunk-1","autorun":"false","dpi":72,"out-width":"70%","editor-quick-suggestions":"false"},"id":1,"code":"ggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy))\n"},{"options":{"classes":"","read-only":"false","fig-height":"3.7","warning":"true","results":"markup","fig-width":"6","output":"true","out-height":"","context":"interactive","editor-max-height":"","fig-cap":"","editor-font-scale":"0.85","comment":"","message":"true","label":"unnamed-chunk-2","autorun":"false","dpi":72,"out-width":"70%","editor-quick-suggestions":"false"},"id":2,"code":"ggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy), position = \"jitter\")\n"}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"ggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy))\n","options":{"label":"unnamed-chunk-1","results":"markup","dpi":72,"comment":"","context":"interactive","autorun":"false","editor-quick-suggestions":"false","fig-height":"3.7","fig-cap":"","out-height":"","editor-font-scale":"0.85","message":"true","warning":"true","read-only":"false","out-width":"70%","fig-width":"6","classes":"","output":"true","editor-max-height":""}},{"id":2,"code":"ggplot(data = mpg) +\n  geom_point(mapping = aes(x = displ, y = hwy), position = \"jitter\")\n","options":{"label":"unnamed-chunk-2","results":"markup","dpi":72,"comment":"","context":"interactive","autorun":"false","editor-quick-suggestions":"false","fig-height":"3.7","fig-cap":"","out-height":"","editor-font-scale":"0.85","message":"true","warning":"true","read-only":"false","out-width":"70%","fig-width":"6","classes":"","output":"true","editor-max-height":""}}];
 
 </script>
 <script type="module">
@@ -1170,7 +1170,7 @@ globalThis.qwebrExecuteCode = async function (
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/andrewheiss/r-primers"> <i class="bi bi-github" role="img" aria-label="github">
+    <a class="nav-link" href="https://github.com/OferEngel/UMCG-r-primers"> <i class="bi bi-github" role="img" aria-label="github">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -1850,7 +1850,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section>
 <section id="review-jitter" class="level3">
 <h3 class="anchored" data-anchor-id="review-jitter">Review: jitter</h3>
-<p>In the <a href="../..\03-viz/07-layers.qmd">Scatterplots tutorial</a>, you learned of a geom that displays the equivalent of <code>geom_point()</code> with a <code>position = "jitter"</code> adjustment.</p>
+<p>In the <a href="../..\03-viz/07-layers.html">Scatterplots tutorial</a>, you learned of a geom that displays the equivalent of <code>geom_point()</code> with a <code>position = "jitter"</code> adjustment.</p>
 <p>Rewrite the code below to use that geom. Do you obtain similar results?</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>

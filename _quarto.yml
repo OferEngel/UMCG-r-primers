@@ -21,7 +21,7 @@ website:
     right:
       - icon: github
         aria-label: github
-        href: https://github.com/andrewheiss/r-primers
+        href: https://github.com/OferEngel/UMCG-r-primers
   
   sidebar: 
     style: "docked"

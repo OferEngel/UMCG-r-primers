@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"ggplot(data = diamonds) +\n  geom_boxplot(mapping = aes(x = carat, y = price))\n","id":1,"options":{"comment":"","editor-quick-suggestions":"false","autorun":"false","message":"true","classes":"","context":"interactive","label":"unnamed-chunk-1","output":"true","out-width":"70%","fig-width":"6","out-height":"","editor-max-height":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"0.85","dpi":72,"fig-cap":"","fig-height":"3.7"}},{"code":"ggplot(data = diamonds) +\n  geom_bin2d(mapping = aes(x = carat, y = price))\n","id":2,"options":{"comment":"","editor-quick-suggestions":"false","autorun":"false","message":"true","classes":"","context":"interactive","label":"unnamed-chunk-2","output":"true","out-width":"70%","fig-width":"6","out-height":"","editor-max-height":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"0.85","dpi":72,"fig-cap":"","fig-height":"3.7"}},{"code":"ggplot(data = diamonds) +\n  geom_bin2d(mapping = aes(x = carat, y = price))\n","id":3,"options":{"comment":"","editor-quick-suggestions":"false","autorun":"false","message":"true","classes":"","context":"interactive","label":"unnamed-chunk-3","output":"true","out-width":"70%","fig-width":"6","out-height":"","editor-max-height":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"0.85","dpi":72,"fig-cap":"","fig-height":"3.7"}},{"code":"\n","id":4,"options":{"comment":"","editor-quick-suggestions":"false","autorun":"false","message":"true","classes":"","context":"interactive","label":"unnamed-chunk-4","output":"true","out-width":"70%","fig-width":"6","out-height":"","editor-max-height":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"0.85","dpi":72,"fig-cap":"","fig-height":"3.7"}}];
+globalThis.qwebrCellDetails = [{"code":"ggplot(data = diamonds) +\n  geom_boxplot(mapping = aes(x = carat, y = price))\n","id":1,"options":{"results":"markup","context":"interactive","output":"true","warning":"true","comment":"","read-only":"false","dpi":72,"message":"true","label":"unnamed-chunk-1","editor-max-height":"","fig-width":"6","fig-cap":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","out-height":"","fig-height":"3.7","out-width":"70%","classes":"","autorun":"false"}},{"code":"ggplot(data = diamonds) +\n  geom_bin2d(mapping = aes(x = carat, y = price))\n","id":2,"options":{"results":"markup","context":"interactive","output":"true","warning":"true","comment":"","read-only":"false","dpi":72,"message":"true","label":"unnamed-chunk-2","editor-max-height":"","fig-width":"6","fig-cap":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","out-height":"","fig-height":"3.7","out-width":"70%","classes":"","autorun":"false"}},{"code":"ggplot(data = diamonds) +\n  geom_bin2d(mapping = aes(x = carat, y = price))\n","id":3,"options":{"results":"markup","context":"interactive","output":"true","warning":"true","comment":"","read-only":"false","dpi":72,"message":"true","label":"unnamed-chunk-3","editor-max-height":"","fig-width":"6","fig-cap":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","out-height":"","fig-height":"3.7","out-width":"70%","classes":"","autorun":"false"}},{"code":"\n","id":4,"options":{"results":"markup","context":"interactive","output":"true","warning":"true","comment":"","read-only":"false","dpi":72,"message":"true","label":"unnamed-chunk-4","editor-max-height":"","fig-width":"6","fig-cap":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","out-height":"","fig-height":"3.7","out-width":"70%","classes":"","autorun":"false"}}];
 
 </script>
 <script type="module">
@@ -1170,7 +1170,7 @@ globalThis.qwebrExecuteCode = async function (
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/andrewheiss/r-primers"> <i class="bi bi-github" role="img" aria-label="github">
+    <a class="nav-link" href="https://github.com/OferEngel/UMCG-r-primers"> <i class="bi bi-github" role="img" aria-label="github">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -1829,7 +1829,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -1851,7 +1851,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section>
 <section id="review-boxplots-with-continuous-variables" class="level3">
 <h3 class="anchored" data-anchor-id="review-boxplots-with-continuous-variables">Review: Boxplots with continuous variables</h3>
-<p>Boxplots efficiently summarize data, which make them a useful tool for large data sets. In the <a href="../..\03-viz/05-counts.qmd">boxplots tutorial</a>, you learned how to use <code>cut_width()</code> and the group aesthetic to plot multiple boxplots for a continuous variable.</p>
+<p>Boxplots efficiently summarize data, which make them a useful tool for large data sets. In the <a href="../..\03-viz/05-counts.html">boxplots tutorial</a>, you learned how to use <code>cut_width()</code> and the group aesthetic to plot multiple boxplots for a continuous variable.</p>
 <p>Modify the code below to cut the carat axis into intervals with width 0.2. Then set the group aesthetic of <code>geom_boxplot()</code> to the result.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
