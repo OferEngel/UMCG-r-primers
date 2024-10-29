@@ -99,32 +99,7 @@ website:
           - href: 04-tidy-data/01-reshape-data/01-tidy-data.qmd
           - href: 04-tidy-data/01-reshape-data/02-wide-to-long.qmd
           - href: 04-tidy-data/01-reshape-data/03-long-to-wide.qmd      
-            
-      # - section: "Basics"
-      #   contents:
-      #   - auto: "basics/01-visualization-basics"
-      #   - auto: "basics/02-programming-basics"
-      # 
-      # - section: "Transform data"
-      #   contents:
-      #   - auto: "transform-data/01-tibbles"
-      #   - auto: "transform-data/02-isolating"
-      #   - auto: "transform-data/03-deriving"
-      # 
-      # - section: "Visualize data"
-      #   contents:
-      #   - auto: "visualize-data/01-eda"
-      #   - auto: "visualize-data/02-bar-charts"
-      #   - auto: "visualize-data/03-histograms"
-      #   - auto: "visualize-data/04-boxplots"
-      #   - auto: "visualize-data/05-scatterplots"
-      #   - auto: "visualize-data/06-line-graphs"
-      #   - auto: "visualize-data/07-overplotting"
-      #   - auto: "visualize-data/08-customize"
-      # 
-      # - section: "Tidy data"
-      #   contents:
-      #   - auto: "tidy-data/01-reshape-data"
+
 
 format:
   html:
