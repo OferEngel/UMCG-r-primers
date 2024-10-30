@@ -93,6 +93,9 @@ website:
               - href: 03-vis/03-05-continuous/06-scatterplots.qmd
               - href: 03-vis/03-05-continuous/07-layers.qmd
               - href: 03-vis/03-05-continuous/08-coordinate-systems.qmd
+              - href: 03-vis/03-05-continuous/09-line-graphs.qmd
+              - href: 03-vis/03-05-continuous/10-similar-geoms.qmd
+              - href: 03-vis/03-05-continuous/11-maps.qmd
       - section: "Reshape data"
         href: 04-tidy-data/01-reshape-data/index.qmd
         contents: 

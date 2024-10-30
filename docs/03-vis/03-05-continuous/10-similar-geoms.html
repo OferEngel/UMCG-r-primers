@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Facets – UMCG R Primers</title>
+<title>Similar geoms – UMCG R Primers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -284,7 +284,7 @@ body.reveal.quarto-dark div.qwebr-console-area {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = ['ggplot2'];
+globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr', 'forcats', 'gapminder', 'maps'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"editor-font-scale":"0.85","warning":"true","comment":"","fig-height":"3.7","fig-width":"6","editor-quick-suggestions":"false","context":"interactive","output":"true","fig-cap":"","read-only":"false","results":"markup","autorun":"false","out-width":"70%","editor-max-height":"","out-height":"","label":"unnamed-chunk-1","message":"true","dpi":72,"classes":""},"code":"ggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = color)) +\n  facet_grid(rows = vars(clarity), cols = vars(cut))\n"},{"id":2,"options":{"editor-font-scale":"0.85","warning":"true","comment":"","fig-height":"3.7","fig-width":"6","editor-quick-suggestions":"false","context":"interactive","output":"true","fig-cap":"","read-only":"false","results":"markup","autorun":"false","out-width":"70%","editor-max-height":"","out-height":"","label":"unnamed-chunk-2","message":"true","dpi":72,"classes":""},"code":"ggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = color)) +\n  facet_grid(cols = vars(cut))\n"},{"id":3,"options":{"editor-font-scale":"0.85","warning":"true","comment":"","fig-height":"3.7","fig-width":"6","editor-quick-suggestions":"false","context":"interactive","output":"true","fig-cap":"","read-only":"false","results":"markup","autorun":"false","out-width":"70%","editor-max-height":"","out-height":"","label":"unnamed-chunk-3","message":"true","dpi":72,"classes":""},"code":"ggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = color)) +\n  facet_grid(rows = vars(clarity))\n"},{"id":4,"options":{"editor-font-scale":"0.85","warning":"true","comment":"","fig-height":"3.7","fig-width":"6","editor-quick-suggestions":"false","context":"interactive","output":"true","fig-cap":"","read-only":"false","results":"markup","autorun":"false","out-width":"70%","editor-max-height":"","out-height":"","label":"unnamed-chunk-4","message":"true","dpi":72,"classes":""},"code":"ggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = color, fill = cut))\n"},{"id":5,"options":{"editor-font-scale":"0.85","warning":"true","comment":"","fig-height":"3.7","fig-width":"6","editor-quick-suggestions":"false","context":"interactive","output":"true","fig-cap":"","read-only":"false","results":"markup","autorun":"false","out-width":"70%","editor-max-height":"","out-height":"","label":"unnamed-chunk-5","message":"true","dpi":72,"classes":""},"code":"ggplot(data = diamonds) +\n  geom_bar(mapping = aes(x = color, fill = cut)) +\n  facet_wrap(vars(cut), scales = \"free\")\n"}];
+globalThis.qwebrCellDetails = [{"code":"asia <- \n  gapminder |> \n  filter(country %in% c(\"China\", \"Korea, Dem. Rep.\", \"Korea, Rep.\", \"Japan\")) |> \n  mutate(country = fct_recode(country, \"North Korea\" = \"Korea, Dem. Rep.\", \"South Korea\" = \"Korea, Rep.\"))\n\ntx <- map_data(\"state\", region = \"texas\")","id":1,"options":{"label":"unnamed-chunk-1","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"setup","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"true","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}},{"code":"ggplot(asia) +\n  geom_line(mapping = aes(x = year, y = lifeExp, color = country, linetype = country))\n","id":2,"options":{"label":"unnamed-chunk-2","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"interactive","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"false","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}},{"code":"ggplot(economics) +\n  geom_line(mapping = aes(x = date, y = unemploy))\n","id":3,"options":{"label":"unnamed-chunk-3","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"interactive","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"false","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}},{"code":"ggplot(economics) +\n  geom_area(mapping = aes(x = date, y = unemploy))\n","id":4,"options":{"label":"unnamed-chunk-4","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"interactive","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"false","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}},{"code":"ggplot(asia) +\n  geom_area(mapping = aes(x = year, y = lifeExp, fill = country))\n","id":5,"options":{"label":"unnamed-chunk-5","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"interactive","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"false","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}},{"code":"ggplot(asia) +\n  geom_area(mapping = aes(x = year, y = lifeExp, fill = country), alpha = 0.3)\n","id":6,"options":{"label":"unnamed-chunk-6","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"interactive","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"false","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}},{"code":"ggplot(tx) +\n  geom_path(mapping = aes(x = long, y = lat))\n","id":7,"options":{"label":"unnamed-chunk-7","message":"true","fig-cap":"","fig-width":"6","out-width":"70%","warning":"true","context":"interactive","editor-font-scale":"0.85","dpi":72,"read-only":"false","fig-height":"3.7","out-height":"","results":"markup","editor-max-height":"","autorun":"false","comment":"","output":"true","classes":"","editor-quick-suggestions":"false"}}];
 
 </script>
 <script type="module">
@@ -1215,7 +1215,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Facets</h1>
+          <h1 class="quarto-secondary-nav-title">Similar geoms</h1>
         </a>     
     </div>
   </nav>
@@ -1442,11 +1442,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../03-vis/01-02-eda/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exploratory Data Analysis</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
@@ -1485,7 +1485,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../03-vis/01-02-eda/07-facets.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../03-vis/01-02-eda/07-facets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Facets</span></a>
   </div>
 </li>
@@ -1495,11 +1495,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../03-vis/03-05-continuous/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Continuous variables</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/01-histograms.html" class="sidebar-item-text sidebar-link">
@@ -1556,7 +1556,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Similar geoms</span></a>
   </div>
 </li>
@@ -1837,7 +1837,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Facets</h1>
+<h1 class="title d-none d-lg-block">Similar geoms</h1>
 </div>
 
 
@@ -1854,119 +1854,276 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="facetting" class="level3 no-hide">
-<h3 class="no-hide anchored" data-anchor-id="facetting">Facetting</h3>
-<p>You can more easily compare subgroups of data if you place each subgroup in its own subplot, a process known as <strong>facetting.</strong></p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="07-facets_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="facet_grid" class="level3">
-<h3 class="anchored" data-anchor-id="facet_grid"><code>facet_grid()</code></h3>
-<p>{ggplot2} provides two functions for facetting. <code>facet_grid()</code> divides the plot into a grid of subplots based on the values of one or two facetting variables. To use it, add <code>facet_grid()</code> to the end of your plot call.</p>
-<p>The code chunks below show three ways to facet with <code>facet_grid()</code>. Spot the differences between the chunks, then run the code to learn what the differences do.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
+<section id="geom_step" class="level3 no-hide">
+<h3 class="no-hide anchored" data-anchor-id="geom_step"><code>geom_step()</code></h3>
+<p><code>geom_step()</code> draws a line chart in a stepwise fashion. To see what I mean, change the geom in the plot below and rerun the code.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(asia) <span class="sc">+</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> lifeExp, <span class="at">color =</span> country, <span class="at">linetype =</span> country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>Good job! You can control whether the steps move horizontally first and then vertically or vertically first and then horizontally with the parameters <code>direction = "hv"</code> (the default) or <code>direction = "vh"</code>.</p>
+</section>
+<section id="geom_area" class="level3">
+<h3 class="anchored" data-anchor-id="geom_area"><code>geom_area()</code></h3>
+<p><code>geom_area()</code> is similar to a line graph, but it fills in the area under the line. To see <code>geom_area()</code> in action, change the geom in the plot below and rerun the code.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(economics) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemploy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </section>
-<section id="facet_grid-recap" class="level3">
-<h3 class="anchored" data-anchor-id="facet_grid-recap"><code>facet_grid()</code> recap</h3>
-<p>As you saw in the code examples, you use <code>facet_grid()</code> by passing a <code>rows</code> and/or a <code>cols</code> argument, with the names of the variables inside a <code>vars()</code> function.</p>
-<ul>
-<li><code>facet_grid()</code> will split the plot into facets vertically by the values of the <code>rows</code> variable: each facet will contain the observations that have a common value of the variable.</li>
-<li><code>facet_grid()</code> will split the plot horizontally by values of the <code>cols</code> variable. The result is a grid of facets, where each specific subplot shows a specific combination of values.</li>
-</ul>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1"></h3>
+<p>Good job! Filling the space under the line gives you a new way to customize your plot.</p>
 </section>
-<section id="facet_wrap" class="level3">
-<h3 class="anchored" data-anchor-id="facet_wrap"><code>facet_wrap()</code></h3>
-<p><code>facet_wrap()</code> provides a more relaxed way to facet a plot on a <em>single</em> variable. It will split the plot into subplots and then reorganize the subplots into multiple rows so that each plot has a more or less square aspect ratio. In short, <code>facet_wrap()</code> <em>wraps</em> the single row of subplots that you would get with <code>facet_grid()</code> into multiple rows.</p>
-<p>To use <code>facet_wrap()</code> pass it a variable name inside <code>vars()</code>, e.g.&nbsp;<code>facet_wrap(vars(color))</code>.</p>
-<p>Add <code>facet_wrap()</code> to the code below to create the graph that appeared at the start of this section. Facet by <code>cut</code>.</p>
+<section id="review-2---set-vs.-map" class="level3">
+<h3 class="anchored" data-anchor-id="review-2---set-vs.-map">Review 2 - Set vs.&nbsp;map</h3>
+<p>Do you recall from <a href="../..\basics/01-visualization-basics/">Visualization Basics</a> how you would set the fill of our plot to blue (instead of, say, map the <code>fill</code> to a variable)? Give it a try.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">fill =</span> cut)) <span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(cut))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(economics) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemploy), <span class="at">fill =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="scales" class="level3">
-<h3 class="anchored" data-anchor-id="scales"><code>scales</code></h3>
-<p>By default, each facet in your plot will share the same <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> ranges. You can change this by adding a <code>scales</code> argument to <code>facet_wrap()</code> or <code>facet_grid()</code>.</p>
-<ul>
-<li><code>scales = "free"</code> will let the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> range of each facet vary</li>
-<li><code>scales = "free_x"</code> will let the <span class="math inline">\(x\)</span> range of each facet vary, but not the <span class="math inline">\(y\)</span> range</li>
-<li><code>scales = "free_y"</code> will let the <span class="math inline">\(y\)</span> range of each facet vary, but not the <span class="math inline">\(x\)</span> range. This is a convenient way to compare the shapes of different distributions</li>
-</ul>
-<p>Try changing the <code>scales</code> argument from <code>free</code> to <code>free_x</code> to <code>free_y</code> to see how it works:</p>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2"></h3>
+<p>Good job! Remember that you map aesthetics to variables inside of <code>aes()</code>. You set aesthetics to values outside of <code>aes()</code>.</p>
+</section>
+<section id="accumulation" class="level3">
+<h3 class="anchored" data-anchor-id="accumulation">Accumulation</h3>
+<p><code>geom_area()</code> is a great choice if your measurements represent the accumulation of objects (like unemployed people). Notice that the <span class="math inline">\(y\)</span> axis <code>geom_area()</code> always begins or ends at zero.</p>
+<p>Perhaps because of this, <code>geom_area()</code> can be quirky when you have multiple groups. Run the code below. Can you tell what happens here?</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li></ul>
 <div class="tab-content">
-<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 </div>
 </div>
 </section>
-<section id="recap" class="level3">
-<h3 class="anchored" data-anchor-id="recap">Recap</h3>
-<p>In this tutorial, you learned how to make bar charts; but much of what you learned applies to other types of charts as well. Here’s what you should know:</p>
-<ul>
-<li>Bar charts are the basis for histograms, which means that you can interpret histograms in a similar way.</li>
-<li>Bars are not the only geom in {ggplot2} that use the fill aesthetic. You can use both fill and color aesthetics with any geom that has an “interior” region.</li>
-<li>You can use the same position adjustments with any {ggplot2} geom: <code>"identity"</code>, <code>"stack"</code>, <code>"dodge"</code>, <code>"fill"</code>, <code>"nudge"</code>, and <code>"jitter"</code> (we’ll learn about <code>"nudge"</code> and <code>"jitter"</code> later). Each geom comes with its own sensible default.</li>
-<li>You can facet any {ggplot2} plot by adding <code>facet_grid()</code> or <code>facet_wrap()</code> to the plot call.</li>
-</ul>
-<p>Bar charts are an excellent way to display the distribution of a categorical variable. In the next tutorial, we’ll meet a set of geoms that display the distribution of a continuous variable.</p>
+<section id="review-3-position-adjustments" class="level3">
+<h3 class="anchored" data-anchor-id="review-3-position-adjustments">Review 3: Position adjustments</h3>
+<p>If you answered that people in China were living to be 300 years old, you guessed wrong.</p>
+<p><code>geom_area()</code> is stacking each group above the group below. As a result, the line that should display the life expectancy for China displays the combined life expectancy for all countries.</p>
+<p>You can fix this by changing the position adjustment for <code>geom_area()</code>. Give it a try below. Change the position parameter from “stack” (the implied default) to <code>"identity"</code>. See <a href="../..\visualize-data/02-bar-charts/">Bar Charts</a> if you’d like to learn more about position adjustments.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(asia) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_area</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> lifeExp, <span class="at">fill =</span> country), <span class="at">position =</span> <span class="st">"identity"</span>, <span class="at">alpha =</span> <span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3"></h3>
+<p>Good job! You can further customize your graph by switching from <code>geom_area()</code> to <code>geom_ribbon()</code>. <code>geom_ribbon()</code> lets you map the bottom of the filled area to a variable, as well as the top. See <code>?geom_ribbon</code> if you’d like to learn more.</p>
+</section>
+<section id="geom_path" class="level3">
+<h3 class="anchored" data-anchor-id="geom_path"><code>geom_path()</code></h3>
+<p><code>geom_line()</code> comes with a strange bedfellow, <code>geom_path()</code>. <code>geom_path()</code> draws a line between points like <code>geom_line()</code>, but instead of connecting points in the order that they appear along the <span class="math inline">\(x\)</span> axis, <code>geom_path()</code> connects the points in the order that they appear <em>in the data set</em>.</p>
+<p>It starts with the observation in row one of the data and connects it to the observation in row two, which it then connects to the observation in row three, and so on.</p>
+</section>
+<section id="geom_path-example" class="level3">
+<h3 class="anchored" data-anchor-id="geom_path-example"><code>geom_path()</code> example</h3>
+<p>To see how <code>geom_path()</code> does this, let’s rearrange the rows in the <code>economics</code> dataset. We can reorder them by <code>unemploy</code> value. Now the data set will begin with the observation that had the lowest value of <code>unemploy</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>economics2 <span class="ot">&lt;-</span> economics <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(unemploy)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>economics2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 574 × 6
+   date         pce    pop psavert uempmed unemploy
+   &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+ 1 1968-12-01  576. 201621    11.1     4.4     2685
+ 2 1968-09-01  568. 201095    10.6     4.6     2686
+ 3 1968-10-01  572. 201290    10.8     4.8     2689
+ 4 1969-02-01  589. 201881     9.7     4.9     2692
+ 5 1968-04-01  544  200208    12.3     4.6     2709
+ 6 1969-03-01  589. 202023    10.2     4       2712
+ 7 1969-05-01  600. 202331    10.1     4.2     2713
+ 8 1968-11-01  577. 201466    10.6     4.4     2715
+ 9 1969-01-01  584. 201760    10.3     4.4     2718
+10 1968-05-01  550. 200361    12       4.4     2740
+# ℹ 564 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="geom_path-example-continued" class="level3">
+<h3 class="anchored" data-anchor-id="geom_path-example-continued">g<code>eom_path()</code> example continued</h3>
+<p>If we plot the reordered data with both <code>geom_line()</code> and <code>geom_path()</code> we get two very different graphs.</p>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(economics2) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemploy))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(economics2) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_path</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemploy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="10-similar-geoms_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="10-similar-geoms_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The plot on the left uses <code>geom_line()</code>, hence the points are connected in order along the <span class="math inline">\(x\)</span> axis. The plot on the right uses <code>geom_path()</code>. These points are connected in the order that they appear in the dataset, which happens to put them in order along the <span class="math inline">\(y\)</span> axis.</p>
+</section>
+<section id="a-use-case" class="level3">
+<h3 class="anchored" data-anchor-id="a-use-case">A use case</h3>
+<p>Why would you want to use <code>geom_path()</code>? The code below illustrates one particularly useful case. The <code>tx</code> dataset contains latitude and longitude coordinates saved in a specific order.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,088 × 6
+    long   lat group order region subregion
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;    
+ 1 -94.5  33.7     1     1 texas  &lt;NA&gt;     
+ 2 -94.5  33.7     1     2 texas  &lt;NA&gt;     
+ 3 -94.5  33.6     1     3 texas  &lt;NA&gt;     
+ 4 -94.5  33.6     1     4 texas  &lt;NA&gt;     
+ 5 -94.5  33.6     1     5 texas  &lt;NA&gt;     
+ 6 -94.4  33.6     1     6 texas  &lt;NA&gt;     
+ 7 -94.4  33.6     1     7 texas  &lt;NA&gt;     
+ 8 -94.4  33.6     1     8 texas  &lt;NA&gt;     
+ 9 -94.4  33.6     1     9 texas  &lt;NA&gt;     
+10 -94.3  33.6     1    10 texas  &lt;NA&gt;     
+# ℹ 1,078 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="tx" class="level3">
+<h3 class="anchored" data-anchor-id="tx">tx</h3>
+<p>What do you think happens when you plot the data in <code>tx</code>? Run the code to find out.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive editor</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4"></h3>
+<p>Good job! <code>geom_path()</code> reveals how you can use what is essentially a line plot to make a map (this is a map of the state of Texas). There are other better ways to make maps in R, but this low tech method is surprisingly versatile.</p>
+</section>
+<section id="geom_polygon" class="level3">
+<h3 class="anchored" data-anchor-id="geom_polygon"><code>geom_polygon()</code></h3>
+<p><code>geom_polygon()</code> extends <code>geom_path()</code> one step further: it connects the last point to the first and then colors the interior region with a fill. The result is a polygon.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tx) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="10-similar-geoms_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2-shattered-glass" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2-shattered-glass">Exercise 2: Shattered glass</h3>
+<p>What do you think went wrong in the plot of Texas below?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="10-similar-geoms_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="question callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>What went wrong?</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<form name="form_11089" onsubmit="return validate_form_11089()" method="post">
+<input type="radio" name="answer_11089" id="answer_11089_1" value="The rows in the dataset became out of order.">
+<label>The rows in the dataset became out of order.</label>
+<br>
+<input type="radio" name="answer_11089" id="answer_11089_2" value="The programmer did not set a fill aesthetic.">
+<label>The programmer did not set a fill aesthetic.</label>
+<br>
+<input type="radio" name="answer_11089" id="answer_11089_3" value="The programmer used a line plot instead of a polygon plot.">
+<label>The programmer used a line plot instead of a polygon plot.</label>
+<br>
+<input type="submit" value="Submit answer">
+<div id="result_11089"></div>
+</form>
+<script>function validate_form_11089() {var x, text; var x = document.forms['form_11089']['answer_11089'].value;if (x == 'The rows in the dataset became out of order.'){text = 'Correct! It looks like someone messed with tx. tx and datasets like it will have an order variable that you can use to ensure that the data is in the correct order before you plot it.';} else {text = 'I have a different answer';} document.getElementById('result_11089').innerHTML = text; evaluate_final_score(); return false;}function evaluate_final_score(){
+         element = document.getElementById('checkdown_final_score');
+         if(element === null){return false;} else {var element, text, res1;res1 = document.getElementById('result_11089').innerText == 'Correct! It looks like someone messed with tx. tx and datasets like it will have an order variable that you can use to ensure that the data is in the correct order before you plot it.';text = res1;element.innerHTML = text;
+         return false;
+         }}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5"></h2>
 <div class="cell" data-layout-align="center">
 <section id="buttons">
 <button id="continueButton" class="btn btn-primary float-start me-2">
 Continue
 </button>
-<button id="resetButton" class="btn btn-outline-warning btn-sm float-end">
-Start over
-</button>
+<a id="nextTopicButton" class="btn btn-danger disabled" href="03-maps.html" role="button">Next topic</a> <button id="resetButton" class="btn btn-outline-warning btn-sm float-end">Start over</button>
 </section>
 </div>
 
@@ -2395,7 +2552,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/OferEngel/UMCG-r-primers/edit/main/03-vis/01-02-eda/07-facets.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/OferEngel/UMCG-r-primers/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../js/progressive-reveal.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/OferEngel/UMCG-r-primers/edit/main/03-vis/03-05-continuous/10-similar-geoms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/OferEngel/UMCG-r-primers/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="../../js/progressive-reveal.js"></script>
 <script src="../../js/bootstrapify.js"></script>
 <script type="module">
 // Handle cell initialization initialization

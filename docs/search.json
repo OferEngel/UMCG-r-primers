@@ -479,27 +479,27 @@
   {
     "objectID": "03-vis/01-02-eda/01-eda.html",
     "href": "03-vis/01-02-eda/01-eda.html",
-    "title": "Exploratory data analysis",
+    "title": "What is EDA?",
     "section": "",
-    "text": "EDA is an iterative cycle that helps you understand what your data says. When you do EDA, you:\n\nGenerate questions/hypotheses about your data\nSearch for answers by visualizing, transforming, and/or modeling your data\nUse what you learn to refine your questions and/or generate new questions\n\nEDA is an important part of any data analysis. You can use EDA to make discoveries about the world; or you can use EDA to ensure the quality of your data, asking questions about whether the data meets your standards or not.",
+    "text": "EDA is an iterative cycle that helps you understand what your data says. When you do EDA, you:\nEDA is an important part of any data analysis. You can use EDA to make discoveries about the world; or you can use EDA to ensure the quality of your data, asking questions about whether the data meets your standards or not.",
     "crumbs": [
       "About",
       "Visualize Data",
       "Exploratory Data Analysis",
-      "Exploratory data analysis"
+      "What is EDA?"
     ]
   },
   {
     "objectID": "03-vis/01-02-eda/01-eda.html#section",
     "href": "03-vis/01-02-eda/01-eda.html#section",
-    "title": "Exploratory data analysis",
+    "title": "What is EDA?",
     "section": "",
     "text": "Continue\n\nNext topic Start over",
     "crumbs": [
       "About",
       "Visualize Data",
       "Exploratory Data Analysis",
-      "Exploratory data analysis"
+      "What is EDA?"
     ]
   },
   {
@@ -1698,5 +1698,57 @@
     "title": "R Primers",
     "section": "License",
     "text": "License\n\nThe original primers were developed by the RStudio/Posit Education Team and made open source on GitHub. Following the original license, these tutorials are licensed under the Creative Commons Attribution-ShareAlike 4.0 License (CC BY-SA 4.0).\nThe primers are derived from the book R for Data Science from O’Reilly Media, Inc. Copyright © 2017 Garrett Grolemund, Hadley Wickham. Used with permission.\nSee here for the full license."
+  },
+  {
+    "objectID": "03-vis/03-05-continuous/11-maps.html#section-4",
+    "href": "03-vis/03-05-continuous/11-maps.html#section-4",
+    "title": "Maps",
+    "section": "",
+    "text": "Continue\n\n\nStart over",
+    "crumbs": [
+      "About",
+      "Visualize Data",
+      "Continuous variables",
+      "Maps"
+    ]
+  },
+  {
+    "objectID": "03-vis/03-05-continuous/09-line-graphs.html",
+    "href": "03-vis/03-05-continuous/09-line-graphs.html",
+    "title": "Line graphs",
+    "section": "",
+    "text": "A line graph displays a functional relationship between two continuous variables. A map displays spatial data. The two may seem different, but they are made in similar ways. This tutorial will examine them both.\nIn this tutorial, you’ll learn how to:",
+    "crumbs": [
+      "About",
+      "Visualize Data",
+      "Continuous variables",
+      "Line graphs"
+    ]
+  },
+  {
+    "objectID": "03-vis/03-05-continuous/09-line-graphs.html#section-5",
+    "href": "03-vis/03-05-continuous/09-line-graphs.html#section-5",
+    "title": "Line graphs",
+    "section": "",
+    "text": "Continue\n\nNext topic Start over",
+    "crumbs": [
+      "About",
+      "Visualize Data",
+      "Continuous variables",
+      "Line graphs"
+    ]
+  },
+  {
+    "objectID": "03-vis/03-05-continuous/10-similar-geoms.html#section-5",
+    "href": "03-vis/03-05-continuous/10-similar-geoms.html#section-5",
+    "title": "Similar geoms",
+    "section": "",
+    "text": "Continue\n\nNext topic Start over",
+    "crumbs": [
+      "About",
+      "Visualize Data",
+      "Continuous variables",
+      "Similar geoms"
+    ]
   }
 ]
