@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"p1 <- ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +\n  geom_smooth(mapping = aes(color = cut), se = FALSE) + \n  labs(title = \"Carat size vs. Price\",\n       subtitle = \"Fair cut diamonds tend to be large, but they fetch the lowest prices for most carat sizes.\",\n       caption = \"Data by Hadley Wickham\") +\n  theme_bw()\n\np_cont <- ggplot(data = mpg) + \n  geom_jitter(mapping = aes(x = displ, y = hwy, color = hwy)) +\n  theme_bw()","options":{"context":"setup","output":"true","results":"markup","fig-height":"3.7","out-width":"70%","message":"true","fig-width":"6","warning":"true","autorun":"true","classes":"","comment":"","read-only":"false","label":"unnamed-chunk-1","out-height":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","editor-max-height":"","dpi":72,"fig-cap":""},"id":1},{"code":"p1 + scale_color_brewer()\n","options":{"context":"interactive","output":"true","results":"markup","fig-height":"3.7","out-width":"70%","message":"true","fig-width":"6","warning":"true","autorun":"false","classes":"","comment":"","read-only":"false","label":"unnamed-chunk-2","out-height":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","editor-max-height":"","dpi":72,"fig-cap":""},"id":2},{"code":"RColorBrewer::display.brewer.all()\n","options":{"context":"interactive","output":"true","results":"markup","fig-height":"8","out-width":"70%","message":"true","fig-width":"6","warning":"true","autorun":"false","classes":"","comment":"","read-only":"false","label":"unnamed-chunk-3","out-height":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","editor-max-height":"","dpi":72,"fig-cap":""},"id":3},{"code":"p1\n","options":{"context":"interactive","output":"true","results":"markup","fig-height":"3.7","out-width":"70%","message":"true","fig-width":"6","warning":"true","autorun":"false","classes":"","comment":"","read-only":"false","label":"unnamed-chunk-4","out-height":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","editor-max-height":"","dpi":72,"fig-cap":""},"id":4},{"code":"p_cont\n","options":{"context":"interactive","output":"true","results":"markup","fig-height":"3.7","out-width":"70%","message":"true","fig-width":"6","warning":"true","autorun":"false","classes":"","comment":"","read-only":"false","label":"unnamed-chunk-5","out-height":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","editor-max-height":"","dpi":72,"fig-cap":""},"id":5},{"code":"p_cont + scale_color_viridis_c(option = \"turbo\")\n","options":{"context":"interactive","output":"true","results":"markup","fig-height":"3.7","out-width":"70%","message":"true","fig-width":"6","warning":"true","autorun":"false","classes":"","comment":"","read-only":"false","label":"unnamed-chunk-6","out-height":"","editor-font-scale":"0.85","editor-quick-suggestions":"false","editor-max-height":"","dpi":72,"fig-cap":""},"id":6}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"p1 <- ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +\n  geom_smooth(mapping = aes(color = cut), se = FALSE) + \n  labs(title = \"Carat size vs. Price\",\n       subtitle = \"Fair cut diamonds tend to be large, but they fetch the lowest prices for most carat sizes.\",\n       caption = \"Data by Hadley Wickham\") +\n  theme_bw()\n\np_cont <- ggplot(data = mpg) + \n  geom_jitter(mapping = aes(x = displ, y = hwy, color = hwy)) +\n  theme_bw()","options":{"results":"markup","editor-max-height":"","editor-font-scale":"0.85","classes":"","out-height":"","comment":"","message":"true","autorun":"true","fig-cap":"","read-only":"false","fig-height":"3.7","dpi":72,"warning":"true","context":"setup","fig-width":"6","output":"true","label":"unnamed-chunk-1","editor-quick-suggestions":"false","out-width":"70%"}},{"id":2,"code":"p1 + scale_color_brewer()\n","options":{"results":"markup","editor-max-height":"","editor-font-scale":"0.85","classes":"","out-height":"","comment":"","message":"true","autorun":"false","fig-cap":"","read-only":"false","fig-height":"3.7","dpi":72,"warning":"true","context":"interactive","fig-width":"6","output":"true","label":"unnamed-chunk-2","editor-quick-suggestions":"false","out-width":"70%"}},{"id":3,"code":"RColorBrewer::display.brewer.all()\n","options":{"results":"markup","editor-max-height":"","editor-font-scale":"0.85","classes":"","out-height":"","comment":"","message":"true","autorun":"false","fig-cap":"","read-only":"false","fig-height":"8","dpi":72,"warning":"true","context":"interactive","fig-width":"6","output":"true","label":"unnamed-chunk-3","editor-quick-suggestions":"false","out-width":"70%"}},{"id":4,"code":"p1\n","options":{"results":"markup","editor-max-height":"","editor-font-scale":"0.85","classes":"","out-height":"","comment":"","message":"true","autorun":"false","fig-cap":"","read-only":"false","fig-height":"3.7","dpi":72,"warning":"true","context":"interactive","fig-width":"6","output":"true","label":"unnamed-chunk-4","editor-quick-suggestions":"false","out-width":"70%"}},{"id":5,"code":"p_cont\n","options":{"results":"markup","editor-max-height":"","editor-font-scale":"0.85","classes":"","out-height":"","comment":"","message":"true","autorun":"false","fig-cap":"","read-only":"false","fig-height":"3.7","dpi":72,"warning":"true","context":"interactive","fig-width":"6","output":"true","label":"unnamed-chunk-5","editor-quick-suggestions":"false","out-width":"70%"}},{"id":6,"code":"p_cont + scale_color_viridis_c(option = \"turbo\")\n","options":{"results":"markup","editor-max-height":"","editor-font-scale":"0.85","classes":"","out-height":"","comment":"","message":"true","autorun":"false","fig-cap":"","read-only":"false","fig-height":"3.7","dpi":72,"warning":"true","context":"interactive","fig-width":"6","output":"true","label":"unnamed-chunk-6","editor-quick-suggestions":"false","out-width":"70%"}}];
 
 </script>
 <script type="module">
@@ -1450,7 +1450,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1546,6 +1546,24 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>

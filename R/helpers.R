@@ -1,3 +1,8 @@
+library(tidyverse)
+library(magrittr)
+library(checkdown)
+
+
 create_buttons <- function(next_topic = "#") {
   if (is.null(next_topic)) {
     next_button <- ""

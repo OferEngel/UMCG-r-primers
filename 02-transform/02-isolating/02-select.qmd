@@ -109,11 +109,13 @@ check_question(
     "select(babynames, -c(year, sex, prop))",
     "select(babynames, name:n)",
     'select(babynames, starts_with("n"))',
-    'select(babynames, ends_with("n"))'
+    'select(babynames, ends_with("n"))', 
+     'select(babynames, one_of(c("name", "n", "chengy")))'
   ), 
   type = "radio", 
   button_label = "Submit answer", 
   q_id = 1,
+  random_answer_order = TRUE,
   right = c("Correct!")
 )
 ```

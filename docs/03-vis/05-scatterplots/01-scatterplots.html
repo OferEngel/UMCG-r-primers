@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"comment":"","classes":"","output":"true","context":"interactive","results":"markup","fig-height":"3.7","label":"unnamed-chunk-1","read-only":"false","editor-font-scale":"0.85","warning":"true","fig-width":"6","autorun":"false","fig-cap":"","dpi":72,"out-width":"70%","message":"true","out-height":"","editor-max-height":"","editor-quick-suggestions":"false"},"code":"mpg |> \n  group_by(class) |> \n  summarize(mean_cty = mean(cty), mean_hwy = mean(hwy)) |> \n  ggplot()\n"},{"id":2,"options":{"comment":"","classes":"","output":"true","context":"interactive","results":"markup","fig-height":"3.7","label":"unnamed-chunk-2","read-only":"false","editor-font-scale":"0.85","warning":"true","fig-width":"6","autorun":"false","fig-cap":"","dpi":72,"out-width":"70%","message":"true","out-height":"","editor-max-height":"","editor-quick-suggestions":"false"},"code":"mpg |> \n  group_by(class) |> \n  summarize(mean_cty = mean(cty), mean_hwy = mean(hwy)) |> \n  ggplot() +\n    geom_point(mapping = aes(x = mean_cty, y = mean_hwy))\n"},{"id":3,"options":{"comment":"","classes":"","output":"true","context":"interactive","results":"markup","fig-height":"3.7","label":"unnamed-chunk-3","read-only":"false","editor-font-scale":"0.85","warning":"true","fig-width":"6","autorun":"false","fig-cap":"","dpi":72,"out-width":"70%","message":"true","out-height":"","editor-max-height":"","editor-quick-suggestions":"false"},"code":"mpg |> \n  group_by(class) |> \n  summarize(mean_cty = mean(cty), mean_hwy = mean(hwy)) |> \n  ggplot() \n"}];
+globalThis.qwebrCellDetails = [{"code":"mpg |> \n  group_by(class) |> \n  summarize(mean_cty = mean(cty), mean_hwy = mean(hwy)) |> \n  ggplot()\n","id":1,"options":{"autorun":"false","out-height":"","context":"interactive","warning":"true","message":"true","classes":"","results":"markup","out-width":"70%","fig-height":"3.7","editor-font-scale":"0.85","fig-cap":"","output":"true","editor-max-height":"","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-1","comment":"","read-only":"false","fig-width":"6"}},{"code":"mpg |> \n  group_by(class) |> \n  summarize(mean_cty = mean(cty), mean_hwy = mean(hwy)) |> \n  ggplot() +\n    geom_point(mapping = aes(x = mean_cty, y = mean_hwy))\n","id":2,"options":{"autorun":"false","out-height":"","context":"interactive","warning":"true","message":"true","classes":"","results":"markup","out-width":"70%","fig-height":"3.7","editor-font-scale":"0.85","fig-cap":"","output":"true","editor-max-height":"","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-2","comment":"","read-only":"false","fig-width":"6"}},{"code":"mpg |> \n  group_by(class) |> \n  summarize(mean_cty = mean(cty), mean_hwy = mean(hwy)) |> \n  ggplot() \n","id":3,"options":{"autorun":"false","out-height":"","context":"interactive","warning":"true","message":"true","classes":"","results":"markup","out-width":"70%","fig-height":"3.7","editor-font-scale":"0.85","fig-cap":"","output":"true","editor-max-height":"","editor-quick-suggestions":"false","dpi":72,"label":"unnamed-chunk-3","comment":"","read-only":"false","fig-width":"6"}}];
 
 </script>
 <script type="module">
@@ -1450,7 +1450,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1546,6 +1546,24 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>
@@ -1899,7 +1917,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">

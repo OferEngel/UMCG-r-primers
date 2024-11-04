@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"p1 <- ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +\n  geom_smooth(mapping = aes(color = cut), se = FALSE) + \n  labs(title = \"Carat size vs. Price\",\n       subtitle = \"Fair cut diamonds tend to be large, but they fetch the lowest prices for most carat sizes.\",\n       caption = \"Data by Hadley Wickham\")","options":{"context":"setup","comment":"","editor-max-height":"","fig-width":"6","autorun":"true","out-width":"70%","warning":"true","fig-cap":"","output":"true","read-only":"false","out-height":"","classes":"","message":"true","results":"markup","editor-quick-suggestions":"false","editor-font-scale":"0.85","fig-height":"3.7","dpi":72,"label":"unnamed-chunk-1"}},{"id":2,"code":"p1 + theme_bw()\n","options":{"context":"interactive","comment":"","editor-max-height":"","fig-width":"6","autorun":"false","out-width":"70%","warning":"true","fig-cap":"","output":"true","read-only":"false","out-height":"","classes":"","message":"true","results":"markup","editor-quick-suggestions":"false","editor-font-scale":"0.85","fig-height":"3.7","dpi":72,"label":"unnamed-chunk-2"}},{"id":3,"code":"p1\n","options":{"context":"interactive","comment":"","editor-max-height":"","fig-width":"6","autorun":"false","out-width":"70%","warning":"true","fig-cap":"","output":"true","read-only":"false","out-height":"","classes":"","message":"true","results":"markup","editor-quick-suggestions":"false","editor-font-scale":"0.85","fig-height":"3.7","dpi":72,"label":"unnamed-chunk-3"}}];
+globalThis.qwebrCellDetails = [{"options":{"comment":"","read-only":"false","dpi":72,"results":"markup","editor-font-scale":"0.85","editor-max-height":"","classes":"","out-width":"70%","warning":"true","out-height":"","fig-cap":"","fig-width":"6","message":"true","autorun":"true","output":"true","context":"setup","editor-quick-suggestions":"false","label":"unnamed-chunk-1","fig-height":"3.7"},"id":1,"code":"p1 <- ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +\n  geom_smooth(mapping = aes(color = cut), se = FALSE) + \n  labs(title = \"Carat size vs. Price\",\n       subtitle = \"Fair cut diamonds tend to be large, but they fetch the lowest prices for most carat sizes.\",\n       caption = \"Data by Hadley Wickham\")"},{"options":{"comment":"","read-only":"false","dpi":72,"results":"markup","editor-font-scale":"0.85","editor-max-height":"","classes":"","out-width":"70%","warning":"true","out-height":"","fig-cap":"","fig-width":"6","message":"true","autorun":"false","output":"true","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-2","fig-height":"3.7"},"id":2,"code":"p1 + theme_bw()\n"},{"options":{"comment":"","read-only":"false","dpi":72,"results":"markup","editor-font-scale":"0.85","editor-max-height":"","classes":"","out-width":"70%","warning":"true","out-height":"","fig-cap":"","fig-width":"6","message":"true","autorun":"false","output":"true","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-3","fig-height":"3.7"},"id":3,"code":"p1\n"}];
 
 </script>
 <script type="module">
@@ -1421,7 +1421,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,6 +1517,24 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>
@@ -1816,7 +1834,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">

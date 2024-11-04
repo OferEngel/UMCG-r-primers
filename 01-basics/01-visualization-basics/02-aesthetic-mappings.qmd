@@ -81,8 +81,11 @@ Let's give this a try. Fill in the blank piece of code below with `color = class
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, ____________))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, ____________)
+  ) + 
+  geom_point()
 ```
 
 ## {{< fa lightbulb >}}&ensp;Hint
@@ -92,8 +95,11 @@ ggplot(data = mpg) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, color = class)
+  ) + 
+  geom_point()
 ```
 
 :::
@@ -124,8 +130,11 @@ Change the code below to map `size` to `class`. What happens?
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, color = class)
+  ) + 
+  geom_point()
 ```
 
 ## {{< fa lightbulb >}}&ensp;Hint
@@ -135,8 +144,11 @@ ggplot(data = mpg) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, size = class)
+  ) + 
+  geom_point()
 ```
 
 :::
@@ -154,8 +166,8 @@ You can also map `class` to the `alpha` aesthetic, which controls the transparen
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point()
 ```
 
 ## {{< fa lightbulb >}}&ensp;Hint
@@ -165,8 +177,11 @@ ggplot(data = mpg) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, alpha = class))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, alpha = class)
+  ) + 
+  geom_point()
 ```
 
 :::
@@ -183,8 +198,8 @@ Let's try one more aesthetic. This time map the class of the points to `shape`, 
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point()
 ```
 
 ## {{< fa lightbulb >}}&ensp;Hint
@@ -194,15 +209,15 @@ ggplot(data = mpg) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, shape = class))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, shape = class)) + 
+  geom_point()
 ```
 
 :::
 
 ###
 
-Good work! What happened to the SUVs? ggplot2 will only use six shapes at a time. By default, additional groups will go unplotted when you use the shape aesthetic. So only use it when you have fewer than seven groups.
+What happened to the SUVs? ggplot2 will only use six shapes at a time. By default, additional groups will go unplotted when you use the shape aesthetic. So only use it when you have fewer than seven groups.
 
 ### Exercise 1
 
@@ -213,39 +228,57 @@ In the code below, map `cty`, which is a continuous variable, to `color`, `size`
 
 ```{webr-r}
 # Map cty to color
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) + 
+  geom_point()
 
 # Map cty to size
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) + 
+  geom_point()
 
 # Map cty to shape
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) + 
+  geom_point()
 ```
 
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
 # Map cty to color
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = cty))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, color = cty)
+  ) + 
+  geom_point()
 
 # Map cty to size
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, size = cty))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, size = cty)
+  ) + 
+  geom_point()
 
 # Map cty to shape
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, shape = cty))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, shape = cty)
+  ) + 
+  geom_point()
 ```
 
 :::
 
 ###
 
-Very nice! ggplot2 treats continuous and categorical variables differently. Noteably, ggplot2 supplies a blue gradient when you map a continuous variable to color, and ggplot2 will not map continuous variables to shape.
+Very nice! `ggplot2` treats continuous and categorical variables differently. Note, `ggplot2` supplies a blue gradient when you map a continuous variable to color, and `ggplot2` will not map continuous variables to shape.
     
 ### Exercise 2
 
@@ -255,8 +288,11 @@ Map `class` to `color`, `size`, and `shape` all in the same plot. Does it work?
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) + 
+  geom_point()
 ```
 
 ## {{< fa lightbulb >}}&ensp;Hint
@@ -266,8 +302,17 @@ ggplot(data = mpg) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = class, shape = class))
+ggplot(
+  data = mpg, 
+  mapping = aes(
+    x = displ, 
+    y = hwy, 
+    color = class, 
+    size = class, 
+    shape = class
+    )
+  ) + 
+  geom_point()
 ```
 
 :::
@@ -284,30 +329,36 @@ What happens if you map an aesthetic to something other than a variable name, li
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) + 
+  geom_point()
 ```
 
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = displ < 5))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, color = displ < 5)
+  ) + 
+  geom_point()
 ```
 
 :::
     
 ###
 
-Good job! ggplot2 will map the aesthetic to the results of the expression. Here, ggplot2 mapped the color of each point to TRUE or FALSE based on whther the point's `displ` value was less than five.
+Good job! `ggplot2` will map the aesthetic to the results of the expression. Here, ggplot2 mapped the color of each point to TRUE or FALSE based on whether the point's `displ` value was less than five.
 
 ### Setting aesthetics
 
 What if you just want to make all of the points in your plot blue, like in the plot below?
 
 ```{r echo = FALSE, out.width="80%"}
-ggplot(mpg) +
-  geom_point(aes(displ, hwy), color = "blue")
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(color = "blue")
 ```
 
 You can do this by setting the color aesthetic _outside_ of the `aes()` function, like this
@@ -316,8 +367,11 @@ You can do this by setting the color aesthetic _outside_ of the `aes()` function
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) +
+  geom_point(color = "blue")
 ```
 
 :::
@@ -331,8 +385,9 @@ Setting works for every aesthetic in ggplot2. If you want to manually set the ae
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy), color = "blue", shape = 3, alpha = 0.5)
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = hwy)) +
+  geom_point(color = "blue", shape = 3, alpha = 0.5)
 ```
 
 :::
@@ -343,8 +398,17 @@ If you want to map the aesthetic to a **variable** in the data space, map the ae
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, color = class, shape = fl, alpha = displ))
+ggplot(
+  data = mpg,
+  mapping = aes(
+    x = displ, 
+    y = hwy, 
+    color = class, 
+    shape = fl, 
+    alpha = displ
+    )
+  ) +
+  geom_point()
 ```
 
 :::
@@ -358,15 +422,21 @@ What do you think went wrong in the code below? Fix the code so it does somethin
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy, color = "blue")
+  ) +
+  geom_point()
 ```
 
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+ggplot(
+  data = mpg, 
+  mapping = aes(x = displ, y = hwy)
+  ) +
+  geom_point(color = "blue")
 ```
 
 :::

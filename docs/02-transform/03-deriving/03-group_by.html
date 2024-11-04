@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"tops <- babynames::babynames |> \n  group_by(name, sex) |> \n  summarise(total = sum(n)) |> \n  ungroup() |> \n  top_n(10, total)\n  \ntop_10 <- babynames::babynames |> \n  semi_join(tops, by = c(\"name\", \"sex\"))","id":1,"options":{"fig-cap":"","out-width":"70%","autorun":"true","warning":"true","read-only":"false","editor-max-height":"","fig-height":"3.7","output":"true","message":"true","results":"markup","fig-width":"6","comment":"","dpi":72,"context":"setup","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-1","classes":"","out-height":""}},{"code":"babynames |>\n  group_by(year, sex) |> \n  summarize(total = sum(n))\n","id":2,"options":{"fig-cap":"","out-width":"70%","autorun":"false","warning":"true","read-only":"false","editor-max-height":"","fig-height":"3.7","output":"true","message":"true","results":"markup","fig-width":"6","comment":"","dpi":72,"context":"interactive","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-2","classes":"","out-height":""}},{"code":"\n","id":3,"options":{"fig-cap":"","out-width":"70%","autorun":"false","warning":"true","read-only":"false","editor-max-height":"","fig-height":"3.7","output":"true","message":"true","results":"markup","fig-width":"6","comment":"","dpi":72,"context":"interactive","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-3","classes":"","out-height":""}},{"code":"\n","id":4,"options":{"fig-cap":"","out-width":"70%","autorun":"false","warning":"true","read-only":"false","editor-max-height":"","fig-height":"3.7","output":"true","message":"true","results":"markup","fig-width":"6","comment":"","dpi":72,"context":"interactive","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-4","classes":"","out-height":""}},{"code":"\n","id":5,"options":{"fig-cap":"","out-width":"70%","autorun":"false","warning":"true","read-only":"false","editor-max-height":"","fig-height":"3.7","output":"true","message":"true","results":"markup","fig-width":"6","comment":"","dpi":72,"context":"interactive","editor-font-scale":"0.85","editor-quick-suggestions":"false","label":"unnamed-chunk-5","classes":"","out-height":""}}];
+globalThis.qwebrCellDetails = [{"options":{"results":"markup","warning":"true","classes":"","dpi":72,"autorun":"true","editor-quick-suggestions":"false","out-width":"70%","comment":"","fig-cap":"","message":"true","context":"setup","label":"unnamed-chunk-1","out-height":"","fig-width":"6","output":"true","editor-font-scale":"0.85","editor-max-height":"","fig-height":"3.7","read-only":"false"},"id":1,"code":"tops <- babynames::babynames |> \n  group_by(name, sex) |> \n  summarise(total = sum(n)) |> \n  ungroup() |> \n  top_n(10, total)\n  \ntop_10 <- babynames::babynames |> \n  semi_join(tops, by = c(\"name\", \"sex\"))"},{"options":{"results":"markup","warning":"true","classes":"","dpi":72,"autorun":"false","editor-quick-suggestions":"false","out-width":"70%","comment":"","fig-cap":"","message":"true","context":"interactive","label":"unnamed-chunk-2","out-height":"","fig-width":"6","output":"true","editor-font-scale":"0.85","editor-max-height":"","fig-height":"3.7","read-only":"false"},"id":2,"code":"babynames |>\n  group_by(year, sex) |> \n  summarize(total = sum(n))\n"},{"options":{"results":"markup","warning":"true","classes":"","dpi":72,"autorun":"false","editor-quick-suggestions":"false","out-width":"70%","comment":"","fig-cap":"","message":"true","context":"interactive","label":"unnamed-chunk-3","out-height":"","fig-width":"6","output":"true","editor-font-scale":"0.85","editor-max-height":"","fig-height":"3.7","read-only":"false"},"id":3,"code":"\n"},{"options":{"results":"markup","warning":"true","classes":"","dpi":72,"autorun":"false","editor-quick-suggestions":"false","out-width":"70%","comment":"","fig-cap":"","message":"true","context":"interactive","label":"unnamed-chunk-4","out-height":"","fig-width":"6","output":"true","editor-font-scale":"0.85","editor-max-height":"","fig-height":"3.7","read-only":"false"},"id":4,"code":"\n"},{"options":{"results":"markup","warning":"true","classes":"","dpi":72,"autorun":"false","editor-quick-suggestions":"false","out-width":"70%","comment":"","fig-cap":"","message":"true","context":"interactive","label":"unnamed-chunk-5","out-height":"","fig-width":"6","output":"true","editor-font-scale":"0.85","editor-max-height":"","fig-height":"3.7","read-only":"false"},"id":5,"code":"\n"}];
 
 </script>
 <script type="module">
@@ -1421,7 +1421,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,6 +1517,24 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>

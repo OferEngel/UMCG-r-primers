@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"message":"true","output":"true","comment":"","fig-width":"6","dpi":72,"classes":"","autorun":"true","read-only":"false","results":"markup","out-width":"70%","label":"unnamed-chunk-1","editor-max-height":"","context":"setup","fig-cap":"","fig-height":"3.7","warning":"true","editor-quick-suggestions":"false","out-height":"","editor-font-scale":"0.85"},"id":1,"code":"pollution <- tribble(\n       ~city,   ~size, ~amount,\n  \"New York\", \"large\",      23,\n  \"New York\", \"small\",      14,\n    \"London\", \"large\",      22,\n    \"London\", \"small\",      16,\n   \"Beijing\", \"large\",     121,\n   \"Beijing\", \"small\",     121\n)"},{"options":{"message":"true","output":"true","comment":"","fig-width":"6","dpi":72,"classes":"","autorun":"false","read-only":"false","results":"markup","out-width":"70%","label":"unnamed-chunk-2","editor-max-height":"","context":"interactive","fig-cap":"","fig-height":"3.7","warning":"true","editor-quick-suggestions":"false","out-height":"","editor-font-scale":"0.85"},"id":2,"code":"\n"},{"options":{"message":"true","output":"true","comment":"","fig-width":"6","dpi":72,"classes":"","autorun":"false","read-only":"false","results":"markup","out-width":"70%","label":"unnamed-chunk-3","editor-max-height":"","context":"interactive","fig-cap":"","fig-height":"3.7","warning":"true","editor-quick-suggestions":"false","out-height":"","editor-font-scale":"0.85"},"id":3,"code":"babynames\n"},{"options":{"message":"true","output":"true","comment":"","fig-width":"6","dpi":72,"classes":"","autorun":"false","read-only":"false","results":"markup","out-width":"70%","label":"unnamed-chunk-4","editor-max-height":"","context":"interactive","fig-cap":"","fig-height":"3.7","warning":"true","editor-quick-suggestions":"false","out-height":"","editor-font-scale":"0.85"},"id":4,"code":"babynames |>\n  group_by(year, sex) |> \n  summarise(total = sum(n))\n"},{"options":{"message":"true","output":"true","comment":"","fig-width":"6","dpi":72,"classes":"","autorun":"false","read-only":"false","results":"markup","out-width":"70%","label":"unnamed-chunk-5","editor-max-height":"","context":"interactive","fig-cap":"","fig-height":"3.7","warning":"true","editor-quick-suggestions":"false","out-height":"","editor-font-scale":"0.85"},"id":5,"code":"babynames |>\n  group_by(year, sex) |> \n  summarise(total = sum(n))\n"}];
+globalThis.qwebrCellDetails = [{"code":"pollution <- tribble(\n       ~city,   ~size, ~amount,\n  \"New York\", \"large\",      23,\n  \"New York\", \"small\",      14,\n    \"London\", \"large\",      22,\n    \"London\", \"small\",      16,\n   \"Beijing\", \"large\",     121,\n   \"Beijing\", \"small\",     121\n)","id":1,"options":{"read-only":"false","results":"markup","editor-max-height":"","fig-height":"3.7","warning":"true","context":"setup","editor-quick-suggestions":"false","label":"unnamed-chunk-1","out-height":"","editor-font-scale":"0.85","output":"true","comment":"","out-width":"70%","fig-width":"6","autorun":"true","classes":"","fig-cap":"","dpi":72,"message":"true"}},{"code":"\n","id":2,"options":{"read-only":"false","results":"markup","editor-max-height":"","fig-height":"3.7","warning":"true","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-2","out-height":"","editor-font-scale":"0.85","output":"true","comment":"","out-width":"70%","fig-width":"6","autorun":"false","classes":"","fig-cap":"","dpi":72,"message":"true"}},{"code":"babynames\n","id":3,"options":{"read-only":"false","results":"markup","editor-max-height":"","fig-height":"3.7","warning":"true","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-3","out-height":"","editor-font-scale":"0.85","output":"true","comment":"","out-width":"70%","fig-width":"6","autorun":"false","classes":"","fig-cap":"","dpi":72,"message":"true"}},{"code":"babynames |>\n  group_by(year, sex) |> \n  summarise(total = sum(n))\n","id":4,"options":{"read-only":"false","results":"markup","editor-max-height":"","fig-height":"3.7","warning":"true","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-4","out-height":"","editor-font-scale":"0.85","output":"true","comment":"","out-width":"70%","fig-width":"6","autorun":"false","classes":"","fig-cap":"","dpi":72,"message":"true"}},{"code":"babynames |>\n  group_by(year, sex) |> \n  summarise(total = sum(n))\n","id":5,"options":{"read-only":"false","results":"markup","editor-max-height":"","fig-height":"3.7","warning":"true","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-5","out-height":"","editor-font-scale":"0.85","output":"true","comment":"","out-width":"70%","fig-width":"6","autorun":"false","classes":"","fig-cap":"","dpi":72,"message":"true"}}];
 
 </script>
 <script type="module">
@@ -1450,7 +1450,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1546,6 +1546,24 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>

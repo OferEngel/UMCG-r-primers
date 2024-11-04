@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"number_ones <- babynames::babynames %>% \n  group_by(year, sex) %>% \n  mutate(rank = min_rank(desc(n))) %>% \n  filter(rank == 1, sex == \"M\") %>% \n  ungroup() %>% \n  distinct(name) %>% \n  .$name","id":1,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"setup","out-width":"70%","autorun":"true","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-1","warning":"true","read-only":"false"}},{"code":"\n","id":2,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"interactive","out-width":"70%","autorun":"false","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-2","warning":"true","read-only":"false"}},{"code":"\n","id":3,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"interactive","out-width":"70%","autorun":"false","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-3","warning":"true","read-only":"false"}},{"code":"\n","id":4,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"interactive","out-width":"70%","autorun":"false","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-4","warning":"true","read-only":"false"}},{"code":"\n","id":5,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"interactive","out-width":"70%","autorun":"false","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-5","warning":"true","read-only":"false"}},{"code":"\n","id":6,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"interactive","out-width":"70%","autorun":"false","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-6","warning":"true","read-only":"false"}},{"code":"\n","id":7,"options":{"message":"true","fig-width":"6","editor-quick-suggestions":"false","dpi":72,"comment":"","editor-max-height":"","classes":"","editor-font-scale":"0.85","output":"true","fig-height":"3.7","context":"interactive","out-width":"70%","autorun":"false","out-height":"","results":"markup","fig-cap":"","label":"unnamed-chunk-7","warning":"true","read-only":"false"}}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"number_ones <- babynames::babynames %>% \n  group_by(year, sex) %>% \n  mutate(rank = min_rank(desc(n))) %>% \n  filter(rank == 1, sex == \"M\") %>% \n  ungroup() %>% \n  distinct(name) %>% \n  .$name","options":{"classes":"","context":"setup","autorun":"true","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-1"}},{"id":2,"code":"\n","options":{"classes":"","context":"interactive","autorun":"false","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-2"}},{"id":3,"code":"\n","options":{"classes":"","context":"interactive","autorun":"false","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-3"}},{"id":4,"code":"\n","options":{"classes":"","context":"interactive","autorun":"false","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-4"}},{"id":5,"code":"\n","options":{"classes":"","context":"interactive","autorun":"false","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-5"}},{"id":6,"code":"\n","options":{"classes":"","context":"interactive","autorun":"false","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-6"}},{"id":7,"code":"\n","options":{"classes":"","context":"interactive","autorun":"false","fig-cap":"","comment":"","out-width":"70%","out-height":"","editor-font-scale":"0.85","message":"true","editor-quick-suggestions":"false","editor-max-height":"","results":"markup","fig-height":"3.7","read-only":"false","fig-width":"6","warning":"true","output":"true","dpi":72,"label":"unnamed-chunk-7"}}];
 
 </script>
 <script type="module">
@@ -1421,7 +1421,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,6 +1517,24 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>

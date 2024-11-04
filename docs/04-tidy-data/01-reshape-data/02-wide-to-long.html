@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"cases <- tribble(\n  ~Country, ~\"2011\", ~\"2012\", ~\"2013\",\n      \"FR\",    7000,    6900,    7000,\n      \"DE\",    5800,    6000,    6200,\n      \"US\",   15000,   14000,   13000\n)\n\ncases2 <- tribble(\n  ~city, ~country,  ~continent,     ~\"2011\", ~\"2012\", ~\"2013\",\n  \"Paris\",    \"FR\", \"Europe\",           7000,    6900,    7000,\n  \"Berlin\",   \"DE\", \"Europe\",           5800,    6000,    6200,\n  \"Chicago\",  \"US\", \"North America\",   15000,   14000,   13000\n)","options":{"label":"unnamed-chunk-1","warning":"true","dpi":72,"out-height":"","fig-height":"3.7","classes":"","editor-font-scale":"0.85","fig-cap":"","comment":"","results":"markup","out-width":"70%","output":"true","autorun":"true","editor-quick-suggestions":"false","message":"true","context":"setup","editor-max-height":"","fig-width":"6","read-only":"false"}},{"id":2,"code":"cases |> \n  pivot_longer(\n    cols = c(`2011`, `2012`, `2013`), \n    names_to = \"year\", values_to = \"n\"\n  )","options":{"label":"unnamed-chunk-2","warning":"true","dpi":72,"out-height":"","fig-height":"3.7","classes":"","editor-font-scale":"0.85","fig-cap":"","comment":"","results":"markup","out-width":"70%","output":"true","autorun":"false","editor-quick-suggestions":"false","message":"true","context":"interactive","editor-max-height":"","fig-width":"6","read-only":"false"}},{"id":3,"code":"\n","options":{"label":"unnamed-chunk-3","warning":"true","dpi":72,"out-height":"","fig-height":"3.7","classes":"","editor-font-scale":"0.85","fig-cap":"","comment":"","results":"markup","out-width":"70%","output":"true","autorun":"false","editor-quick-suggestions":"false","message":"true","context":"interactive","editor-max-height":"","fig-width":"6","read-only":"false"}},{"id":4,"code":"table4b |> \n  pivot_longer(\n    cols = -country, \n    names_to = \"year\", \n    values_to = \"population\"\n  )\n","options":{"label":"unnamed-chunk-4","warning":"true","dpi":72,"out-height":"","fig-height":"3.7","classes":"","editor-font-scale":"0.85","fig-cap":"","comment":"","results":"markup","out-width":"70%","output":"true","autorun":"false","editor-quick-suggestions":"false","message":"true","context":"interactive","editor-max-height":"","fig-width":"6","read-only":"false"}},{"id":5,"code":"\n","options":{"label":"unnamed-chunk-5","warning":"true","dpi":72,"out-height":"","fig-height":"3.7","classes":"","editor-font-scale":"0.85","fig-cap":"","comment":"","results":"markup","out-width":"70%","output":"true","autorun":"false","editor-quick-suggestions":"false","message":"true","context":"interactive","editor-max-height":"","fig-width":"6","read-only":"false"}}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"comment":"","output":"true","results":"markup","out-height":"","editor-max-height":"","out-width":"70%","classes":"","dpi":72,"fig-width":"6","editor-quick-suggestions":"false","editor-font-scale":"0.85","read-only":"false","context":"setup","label":"unnamed-chunk-1","message":"true","fig-cap":"","warning":"true","autorun":"true","fig-height":"3.7"},"code":"cases <- tribble(\n  ~Country, ~\"2011\", ~\"2012\", ~\"2013\",\n      \"FR\",    7000,    6900,    7000,\n      \"DE\",    5800,    6000,    6200,\n      \"US\",   15000,   14000,   13000\n)\n\ncases2 <- tribble(\n  ~city, ~country,  ~continent,     ~\"2011\", ~\"2012\", ~\"2013\",\n  \"Paris\",    \"FR\", \"Europe\",           7000,    6900,    7000,\n  \"Berlin\",   \"DE\", \"Europe\",           5800,    6000,    6200,\n  \"Chicago\",  \"US\", \"North America\",   15000,   14000,   13000\n)"},{"id":2,"options":{"comment":"","output":"true","results":"markup","out-height":"","editor-max-height":"","out-width":"70%","classes":"","dpi":72,"fig-width":"6","editor-quick-suggestions":"false","editor-font-scale":"0.85","read-only":"false","context":"interactive","label":"unnamed-chunk-2","message":"true","fig-cap":"","warning":"true","autorun":"false","fig-height":"3.7"},"code":"cases |> \n  pivot_longer(\n    cols = c(`2011`, `2012`, `2013`), \n    names_to = \"year\", values_to = \"n\"\n  )"},{"id":3,"options":{"comment":"","output":"true","results":"markup","out-height":"","editor-max-height":"","out-width":"70%","classes":"","dpi":72,"fig-width":"6","editor-quick-suggestions":"false","editor-font-scale":"0.85","read-only":"false","context":"interactive","label":"unnamed-chunk-3","message":"true","fig-cap":"","warning":"true","autorun":"false","fig-height":"3.7"},"code":"\n"},{"id":4,"options":{"comment":"","output":"true","results":"markup","out-height":"","editor-max-height":"","out-width":"70%","classes":"","dpi":72,"fig-width":"6","editor-quick-suggestions":"false","editor-font-scale":"0.85","read-only":"false","context":"interactive","label":"unnamed-chunk-4","message":"true","fig-cap":"","warning":"true","autorun":"false","fig-height":"3.7"},"code":"table4b |> \n  pivot_longer(\n    cols = -country, \n    names_to = \"year\", \n    values_to = \"population\"\n  )\n"},{"id":5,"options":{"comment":"","output":"true","results":"markup","out-height":"","editor-max-height":"","out-width":"70%","classes":"","dpi":72,"fig-width":"6","editor-quick-suggestions":"false","editor-font-scale":"0.85","read-only":"false","context":"interactive","label":"unnamed-chunk-5","message":"true","fig-cap":"","warning":"true","autorun":"false","fig-height":"3.7"},"code":"\n"}];
 
 </script>
 <script type="module">
@@ -1421,7 +1421,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,6 +1517,24 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>

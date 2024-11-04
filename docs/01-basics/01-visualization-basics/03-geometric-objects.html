@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"output":"true","context":"interactive","read-only":"false","editor-font-scale":"0.85","classes":"","label":"unnamed-chunk-1","warning":"true","message":"true","comment":"","autorun":"false","out-height":"","results":"markup","fig-cap":"","fig-width":"6","out-width":"70%","editor-quick-suggestions":"false","dpi":72,"editor-max-height":"","fig-height":"3.7"},"code":"ggplot(data = mpg) + \n  geom_point(mapping = aes(x = displ, y = hwy))"}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + \n  geom_point()","options":{"editor-font-scale":"0.85","output":"true","warning":"true","message":"true","editor-quick-suggestions":"false","out-width":"70%","read-only":"false","fig-height":"3.7","classes":"","results":"markup","dpi":72,"label":"unnamed-chunk-1","fig-cap":"","context":"interactive","comment":"","autorun":"false","out-height":"","editor-max-height":"","fig-width":"6"}}];
 
 </script>
 <script type="module">
@@ -1421,7 +1421,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,6 +1517,24 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>
@@ -1811,7 +1829,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -1843,8 +1861,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg) <span class="sc">+</span> </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1855,12 +1873,34 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section>
 <section id="more-about-geoms" class="level3">
 <h3 class="anchored" data-anchor-id="more-about-geoms">More about geoms</h3>
-<p>ggplot2 provides over 30 geom functions that you can use to make plots, and extension packages provide even more (see <a href="https://exts.ggplot2.tidyverse.org/gallery/" class="uri">https://exts.ggplot2.tidyverse.org/gallery/</a> for a sampling). You’ll learn how to use these geoms to explore data in the <a href="">Visualize Data</a> primer.</p>
+<p>ggplot2 provides over 30 geom functions that you can use to make plots, and extension packages provide even more (see <a href="https://exts.ggplot2.tidyverse.org/gallery/" class="uri">https://exts.ggplot2.tidyverse.org/gallery/</a> for a sampling).</p>
 <p>Until then, the best way to get a comprehensive overview of the available geoms is with the <a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html">ggplot2 cheatsheet</a>. To learn more about any single geom, look at its help page, e.g.&nbsp;<code>?geom_smooth</code>.</p>
 </section>
 <section id="exercise-1" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
 <p>What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<form name="form_1" onsubmit="return validate_form_1()" method="post">
+<input type="radio" name="answer_1" id="answer_1_1" value="geom_linechart(), boxplot(), geom_histogram(), geom_area()">
+<label>geom_linechart(), boxplot(), geom_histogram(), geom_area()</label>
+<br>
+<input type="radio" name="answer_1" id="answer_1_2" value="geom_line(), geom_boxplot(), geom_histogram(), geom_area()">
+<label>geom_line(), geom_boxplot(), geom_histogram(), geom_area()</label>
+<br>
+<input type="radio" name="answer_1" id="answer_1_3" value="geom_line(), boxplot(), geom_histogram(), geom_areachart()">
+<label>geom_line(), boxplot(), geom_histogram(), geom_areachart()</label>
+<br>
+<input type="submit" value="Submit answer">
+<div id="result_1"></div>
+</form>
+<script>function validate_form_1() {var x, text; var x = document.forms['form_1']['answer_1'].value;if (x == 'geom_line(), geom_boxplot(), geom_histogram(), geom_area()'){text = 'Correct!';} else {text = 'I have a different answer';} document.getElementById('result_1').innerHTML = text; evaluate_final_score(); return false;}function evaluate_final_score(){
+         element = document.getElementById('checkdown_final_score');
+         if(element === null){return false;} else {var element, text, res1;res1 = document.getElementById('result_1').innerText == 'Correct!';text = res1;element.innerHTML = text;
+         return false;
+         }}</script>
+</div>
+</div>
 </section>
 <section id="exercise-2" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
@@ -1873,31 +1913,36 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <p><strong>What does the <code>se</code> argument to <code>geom_smooth()</code> do?</strong></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<form name="form_1" onsubmit="return validate_form_1()" method="post">
-<input type="radio" name="answer_1" id="answer_1_1" value="Nothing. `se` is not an argument of `geom_smooth()`">
-<label>Nothing. `se` is not an argument of `geom_smooth()`</label>
-<br>
-<input type="radio" name="answer_1" id="answer_1_2" value="chooses a method for calculating the smooth line">
-<label>chooses a method for calculating the smooth line</label>
-<br>
-<input type="radio" name="answer_1" id="answer_1_3" value="controls whether or not to **s**how **e**rrors">
+<form name="form_2" onsubmit="return validate_form_2()" method="post">
+<input type="radio" name="answer_2" id="answer_2_1" value="controls whether or not to **s**how **e**rrors">
 <label>controls whether or not to **s**how **e**rrors</label>
 <br>
-<input type="radio" name="answer_1" id="answer_1_4" value="Adds or removes a standard error ribbon around the smooth line">
+<input type="radio" name="answer_2" id="answer_2_2" value="Nothing. `se` is not an argument of `geom_smooth()`">
+<label>Nothing. `se` is not an argument of `geom_smooth()`</label>
+<br>
+<input type="radio" name="answer_2" id="answer_2_3" value="Adds or removes a standard error ribbon around the smooth line">
 <label>Adds or removes a standard error ribbon around the smooth line</label>
 <br>
+<input type="radio" name="answer_2" id="answer_2_4" value="chooses a method for calculating the smooth line">
+<label>chooses a method for calculating the smooth line</label>
+<br>
 <input type="submit" value="Submit answer">
-<div id="result_1"></div>
+<div id="result_2"></div>
 </form>
-<script>function validate_form_1() {var x, text; var x = document.forms['form_1']['answer_1'].value;if (x == 'Adds or removes a standard error ribbon around the smooth line'){text = 'Correct!';} else {text = 'I have a different answer';} document.getElementById('result_1').innerHTML = text; evaluate_final_score(); return false;}function evaluate_final_score(){
+<script>function validate_form_2() {var x, text; var x = document.forms['form_2']['answer_2'].value;if (x == 'Adds or removes a standard error ribbon around the smooth line'){text = 'Correct!';} else {text = 'I have a different answer';} document.getElementById('result_2').innerHTML = text; evaluate_final_score(); return false;}function evaluate_final_score(){
          element = document.getElementById('checkdown_final_score');
-         if(element === null){return false;} else {var element, text, res1;res1 = document.getElementById('result_1').innerText == 'Correct!';text = res1;element.innerHTML = text;
+         if(element === null){return false;} else {var element, text, res1, res2;res1 = document.getElementById('result_1').innerText == 'Correct!'; res2 = document.getElementById('result_2').innerText == 'Correct!';text = res1 + res2;element.innerHTML = text;
          return false;
          }}</script>
 </div>
 </div>
 </div>
 </div>
+</div>
+<p>If you are not sure how to answer the question above, try running the code below in the previous code chunk!</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="putting-it-all-together" class="level3">
@@ -1914,12 +1959,31 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1"></h2>
+<p>Throughout this tutorial, I’ve referred to ggplot2 as a package. What does that mean?</p>
+<p>The R language is subdivided into <strong>packages</strong>, small collections of data sets and functions that all focus on a single task. The functions that we used in this tutorial come from one of those packages, the ggplot2 package, which focuses on visualizing data.</p>
+<section id="what-should-you-know-about-packages" class="level3">
+<h3 class="anchored" data-anchor-id="what-should-you-know-about-packages">What should you know about packages?</h3>
+<p>When you first install R, you get a small collection of core packages known as <strong>base R</strong>. The remaining packages—there are over 10,000 of them—are optional. You don’t need to install them unless you want to use them.</p>
+<p>ggplot2 is one of these optional packages, so are the other packages that we will look at in these tutorials. Some of the most popular and most modern parts of R come in the optional packages.</p>
+<p>You don’t need to worry about installing packages in these tutorials. Each tutorial comes with all of the packages that you need pre-installed; this is how we make the tutorials easy to use.</p>
+<p>However, one day, you may want to use R outside of these tutorials. When that day comes, you’ll want to remember which packages to download to acquire the functions you use here. Throughout the tutorials, I will try to make it as clear as possible where each function comes from!</p>
+</section>
+<section id="where-to-from-here" class="level3">
+<h3 class="anchored" data-anchor-id="where-to-from-here">Where to from here</h3>
+<p>Congratulations! You can use the ggplot2 code template to plot any dataset in many different ways. As you begin exploring data, you should incorporate these tools into your workflow.</p>
+<p>Your new data visualization skills will make it easier to learn other parts of R, because you can now visualize the results of any change that you make to data. you’ll put these skills to immediate use in the next tutorial, which will show you how to extract values from datasets, as well as how to compute new variables and summary statistics from your data. See you there.</p>
+</section>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
 <div class="cell" data-layout-align="center">
 <section id="buttons">
 <button id="continueButton" class="btn btn-primary float-start me-2">
 Continue
 </button>
-<a id="nextTopicButton" class="btn btn-danger disabled" href="04-ggplot2-package.html" role="button">Next topic</a> <button id="resetButton" class="btn btn-outline-warning btn-sm float-end">Start over</button>
+<button id="resetButton" class="btn btn-outline-warning btn-sm float-end">
+Start over
+</button>
 </section>
 </div>
 

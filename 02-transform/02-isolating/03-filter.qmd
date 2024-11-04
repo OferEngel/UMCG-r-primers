@@ -38,7 +38,7 @@ library(babynames)
 source(here::here("R", "helpers.R"))
 ```
 
-`filter()` extracts rows from a data frame and returns them as a new data frame. As with `select()`, the first argument of `filter()` should be a data frame to extract rows from. The arguments that follow should be logical tests; `filter()` will return every row for which the tests return `TRUE`.
+Whereas `select()` extracts columns, `filter()` extracts rows from a data frame. As with `select()`, the first argument of `filter()` should be a data frame to extract rows from. The arguments that follow should be logical tests; `filter()` will return every row for which the tests return `TRUE`.
 
 ### `filter()` in action
 

@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"asia <- \n  gapminder |> \n  filter(country %in% c(\"China\", \"Korea, Dem. Rep.\", \"Korea, Rep.\", \"Japan\")) |> \n  mutate(country = fct_recode(country, \"North Korea\" = \"Korea, Dem. Rep.\", \"South Korea\" = \"Korea, Rep.\"))","options":{"label":"unnamed-chunk-1","fig-height":"3.7","read-only":"false","editor-max-height":"","message":"true","warning":"true","fig-cap":"","fig-width":"6","context":"setup","editor-quick-suggestions":"false","out-width":"70%","results":"markup","classes":"","comment":"","dpi":72,"output":"true","out-height":"","editor-font-scale":"0.85","autorun":"true"},"id":1},{"code":"\n","options":{"label":"unnamed-chunk-2","fig-height":"3.7","read-only":"false","editor-max-height":"","message":"true","warning":"true","fig-cap":"","fig-width":"6","context":"interactive","editor-quick-suggestions":"false","out-width":"70%","results":"markup","classes":"","comment":"","dpi":72,"output":"true","out-height":"","editor-font-scale":"0.85","autorun":"false"},"id":2},{"code":"\n","options":{"label":"unnamed-chunk-3","fig-height":"3.7","read-only":"false","editor-max-height":"","message":"true","warning":"true","fig-cap":"","fig-width":"6","context":"interactive","editor-quick-suggestions":"false","out-width":"70%","results":"markup","classes":"","comment":"","dpi":72,"output":"true","out-height":"","editor-font-scale":"0.85","autorun":"false"},"id":3},{"code":"ggplot(asia) +\n  geom_line(mapping = aes(x = year, y = gdpPercap))\n","options":{"label":"unnamed-chunk-4","fig-height":"3.7","read-only":"false","editor-max-height":"","message":"true","warning":"true","fig-cap":"","fig-width":"6","context":"interactive","editor-quick-suggestions":"false","out-width":"70%","results":"markup","classes":"","comment":"","dpi":72,"output":"true","out-height":"","editor-font-scale":"0.85","autorun":"false"},"id":4},{"code":"ggplot(asia) +\n  geom_line(mapping = aes(x = year, y = gdpPercap, color = country))\n","options":{"label":"unnamed-chunk-5","fig-height":"3.7","read-only":"false","editor-max-height":"","message":"true","warning":"true","fig-cap":"","fig-width":"6","context":"interactive","editor-quick-suggestions":"false","out-width":"70%","results":"markup","classes":"","comment":"","dpi":72,"output":"true","out-height":"","editor-font-scale":"0.85","autorun":"false"},"id":5},{"code":"\n","options":{"label":"unnamed-chunk-6","fig-height":"3.7","read-only":"false","editor-max-height":"","message":"true","warning":"true","fig-cap":"","fig-width":"6","context":"interactive","editor-quick-suggestions":"false","out-width":"70%","results":"markup","classes":"","comment":"","dpi":72,"output":"true","out-height":"","editor-font-scale":"0.85","autorun":"false"},"id":6}];
+globalThis.qwebrCellDetails = [{"options":{"label":"unnamed-chunk-1","fig-cap":"","editor-font-scale":"0.85","message":"true","out-height":"","editor-quick-suggestions":"false","fig-height":"3.7","warning":"true","output":"true","editor-max-height":"","dpi":72,"fig-width":"6","out-width":"70%","results":"markup","read-only":"false","autorun":"true","comment":"","context":"setup","classes":""},"code":"asia <- \n  gapminder |> \n  filter(country %in% c(\"China\", \"Korea, Dem. Rep.\", \"Korea, Rep.\", \"Japan\")) |> \n  mutate(country = fct_recode(country, \"North Korea\" = \"Korea, Dem. Rep.\", \"South Korea\" = \"Korea, Rep.\"))","id":1},{"options":{"label":"unnamed-chunk-2","fig-cap":"","editor-font-scale":"0.85","message":"true","out-height":"","editor-quick-suggestions":"false","fig-height":"3.7","warning":"true","output":"true","editor-max-height":"","dpi":72,"fig-width":"6","out-width":"70%","results":"markup","read-only":"false","autorun":"false","comment":"","context":"interactive","classes":""},"code":"\n","id":2},{"options":{"label":"unnamed-chunk-3","fig-cap":"","editor-font-scale":"0.85","message":"true","out-height":"","editor-quick-suggestions":"false","fig-height":"3.7","warning":"true","output":"true","editor-max-height":"","dpi":72,"fig-width":"6","out-width":"70%","results":"markup","read-only":"false","autorun":"false","comment":"","context":"interactive","classes":""},"code":"\n","id":3},{"options":{"label":"unnamed-chunk-4","fig-cap":"","editor-font-scale":"0.85","message":"true","out-height":"","editor-quick-suggestions":"false","fig-height":"3.7","warning":"true","output":"true","editor-max-height":"","dpi":72,"fig-width":"6","out-width":"70%","results":"markup","read-only":"false","autorun":"false","comment":"","context":"interactive","classes":""},"code":"ggplot(asia) +\n  geom_line(mapping = aes(x = year, y = gdpPercap))\n","id":4},{"options":{"label":"unnamed-chunk-5","fig-cap":"","editor-font-scale":"0.85","message":"true","out-height":"","editor-quick-suggestions":"false","fig-height":"3.7","warning":"true","output":"true","editor-max-height":"","dpi":72,"fig-width":"6","out-width":"70%","results":"markup","read-only":"false","autorun":"false","comment":"","context":"interactive","classes":""},"code":"ggplot(asia) +\n  geom_line(mapping = aes(x = year, y = gdpPercap, color = country))\n","id":5},{"options":{"label":"unnamed-chunk-6","fig-cap":"","editor-font-scale":"0.85","message":"true","out-height":"","editor-quick-suggestions":"false","fig-height":"3.7","warning":"true","output":"true","editor-max-height":"","dpi":72,"fig-width":"6","out-width":"70%","results":"markup","read-only":"false","autorun":"false","comment":"","context":"interactive","classes":""},"code":"\n","id":6}];
 
 </script>
 <script type="module">
@@ -1450,7 +1450,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1546,6 +1546,24 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>

@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"select(babynames, name, sex)\n","options":{"editor-max-height":"","fig-cap":"","out-height":"","comment":"","warning":"true","message":"true","classes":"","editor-font-scale":"0.85","autorun":"false","label":"unnamed-chunk-1","output":"true","out-width":"70%","read-only":"false","dpi":72,"context":"interactive","fig-height":"3.7","results":"markup","editor-quick-suggestions":"false","fig-width":"6"}},{"id":2,"code":"select(babynames, -c(n, prop))\n","options":{"editor-max-height":"","fig-cap":"","out-height":"","comment":"","warning":"true","message":"true","classes":"","editor-font-scale":"0.85","autorun":"false","label":"unnamed-chunk-2","output":"true","out-width":"70%","read-only":"false","dpi":72,"context":"interactive","fig-height":"3.7","results":"markup","editor-quick-suggestions":"false","fig-width":"6"}}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"select(babynames, name, sex)\n","options":{"out-width":"70%","fig-cap":"","results":"markup","fig-width":"6","fig-height":"3.7","warning":"true","read-only":"false","output":"true","editor-font-scale":"0.85","label":"unnamed-chunk-1","comment":"","editor-quick-suggestions":"false","out-height":"","autorun":"false","dpi":72,"classes":"","context":"interactive","message":"true","editor-max-height":""}},{"id":2,"code":"select(babynames, -c(n, prop))\n","options":{"out-width":"70%","fig-cap":"","results":"markup","fig-width":"6","fig-height":"3.7","warning":"true","read-only":"false","output":"true","editor-font-scale":"0.85","label":"unnamed-chunk-2","comment":"","editor-quick-suggestions":"false","out-height":"","autorun":"false","dpi":72,"classes":"","context":"interactive","message":"true","editor-max-height":""}}];
 
 </script>
 <script type="module">
@@ -1421,7 +1421,7 @@ globalThis.qwebrExecuteCode = async function (
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/01-02-eda/01-eda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exploratory data analysis</span></a>
+ <span class="menu-text">What is EDA?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1517,6 +1517,24 @@ globalThis.qwebrExecuteCode = async function (
   <div class="sidebar-item-container"> 
   <a href="../../03-vis/03-05-continuous/08-coordinate-systems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coordinate systems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/09-line-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/10-similar-geoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Similar geoms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../03-vis/03-05-continuous/11-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Maps</span></a>
   </div>
 </li>
       </ul>
@@ -1908,17 +1926,20 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <form name="form_1" onsubmit="return validate_form_1()" method="post">
-<input type="radio" name="answer_1" id="answer_1_1" value="select(babynames, -c(year, sex, prop))">
-<label>select(babynames, -c(year, sex, prop))</label>
+<input type="radio" name="answer_1" id="answer_1_1" value="select(babynames, one_of(c(&quot;name&quot;, &quot;n&quot;, &quot;chengy&quot;)))">
+<label>select(babynames, one_of(c("name", "n", "chengy")))</label>
 <br>
-<input type="radio" name="answer_1" id="answer_1_2" value="select(babynames, name:n)">
-<label>select(babynames, name:n)</label>
-<br>
-<input type="radio" name="answer_1" id="answer_1_3" value="select(babynames, starts_with(&quot;n&quot;))">
+<input type="radio" name="answer_1" id="answer_1_2" value="select(babynames, starts_with(&quot;n&quot;))">
 <label>select(babynames, starts_with("n"))</label>
+<br>
+<input type="radio" name="answer_1" id="answer_1_3" value="select(babynames, -c(year, sex, prop))">
+<label>select(babynames, -c(year, sex, prop))</label>
 <br>
 <input type="radio" name="answer_1" id="answer_1_4" value="select(babynames, ends_with(&quot;n&quot;))">
 <label>select(babynames, ends_with("n"))</label>
+<br>
+<input type="radio" name="answer_1" id="answer_1_5" value="select(babynames, name:n)">
+<label>select(babynames, name:n)</label>
 <br>
 <input type="submit" value="Submit answer">
 <div id="result_1"></div>

@@ -35,7 +35,6 @@ website:
               - href: 01-basics/01-visualization-basics/01-code-template.qmd
               - href: 01-basics/01-visualization-basics/02-aesthetic-mappings.qmd
               - href: 01-basics/01-visualization-basics/03-geometric-objects.qmd
-              - href: 01-basics/01-visualization-basics/04-ggplot-package.qmd
           - section: "Basic programming"
             href: 01-basics/02-programming-basics/index.qmd
             contents: 

@@ -113,9 +113,18 @@ The code below uses functions from the **ggplot2** package to plot the relations
 To see the plot, click "Run Code."
 
 
+
+
+```{webr-r}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point()
+```
+
+
+
 ::: {.callout-note appearance="simple" icon=false .question}
 
-**In the code below we are mapping data columns to graphical features. Which columns are being mapped to which graphical features? (Choose more than one option.) **
+**The code above uses the `mapping` argument to map data to graphical features. Which data-columns are being mapped to which graphical features? (Choose more than one option.) **
 
 ```{r}
 #| label: ggplot-mapping
@@ -132,24 +141,17 @@ check_question(
    "Data column `displ` is mapped to the y-axis."
   ), 
   type = "checkbox", 
+  random_answer_order = TRUE,
   button_label = "Submit answer", 
-  q_id = 12,
-  right = c("That's correct! The variables `displ` and `hwy` are two columns in the data frame. The first is being mapped to the x-axis, and the second is being mapped to the y-axis.")
+  q_id = 14,
+  right = c("That's correct! The code: `aes(x = displ, y = hwy)` is mapping the data columns `displ` to the `x-axis` and `hwy` to the `y-axis`.")
 )
 ```
 :::
 
 
-```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
-```
 
-
-
-Can you spot the relationship?
-
-### And the answer is...
+### Can you spot the relationship between `displ` and `hwy`?
 
 The plot shows a negative relationship between engine size (`displ`) and fuel efficiency (`hwy`). Points that have a large value of `displ` have a small value of `hwy` and vice versa.
 
@@ -162,8 +164,8 @@ Now let's look at how we made the plot.
 Here's the code that we used to make the plot. Notice that it contains three functions: `ggplot()`, `geom_point()`, and `aes()`.
 
 ```{r eval=FALSE}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point()
 ```
 
 In R, a function is a name followed by a set of parentheses. Many functions require special information to do their jobs, and you write this information between the parentheses.
@@ -176,9 +178,7 @@ By itself, `ggplot(data = mpg)` creates an empty graph, which looks like this: t
 
 
 ```{webr-r}
-
 ggplot(data = mpg)
-
 
 ```
 
@@ -191,15 +191,13 @@ You should see an empty canvas. To plot something on the canvas, we need to add 
 `geom_point()` adds a layer of points to the empty plot created by `ggplot()`. This gives us a scatterplot. 
 
 ```{r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point()
 ```
 
 ### `mapping = aes()`
 
 `geom_point()` takes a `mapping` argument that defines which variables in your dataset are mapped to which axes in your graph. The `mapping` argument is always paired with the function `aes()`, which you use to gather together all of the mappings that you want to create. 
-
-### 
 
 Here, we want to map the `displ` variable to the x axis and the `hwy` variable to the y axis, so we add `x = displ` and `y = hwy` inside of `aes()` (and we separate them with a comma). 
 
@@ -213,6 +211,11 @@ Our code follows the common workflow for making graphs with ggplot2. To make a g
 1. Add elements to the graph with a `geom_` function
 1. Map the data columns to the graphical features with  `mapping = aes()` argument
 
+You may place the `mapping = aes()` argument within either
+
+- the `ggplot()` function, e.g., `ggplot(data, mapping = aes(x, y))`
+- the `geom_` layer, e.g, `geom_smooth(mapping = aes(x, y))`
+
 ### A graphing template
 
 In fact, you can turn our code into a reusable template for making graphs. To make a graph, replace the bracketed sections in the code below with a data set, a `geom_` function, or a collection of mappings.
@@ -223,15 +226,15 @@ Give it a try! Replace the bracketed sections with `mpg`, `geom_boxplot`, and `x
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-# ggplot(data = <DATA>) + 
-#  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+# ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) + 
+#  <GEOM_FUNCTION>()
 ```
 
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_boxplot(mapping = aes(x = class, y = hwy))
+ggplot(data = mpg, mapping = aes(x = class, y = hwy)) + 
+  geom_boxplot()
 ```
 
 :::
@@ -251,8 +254,8 @@ Start by carefully comparing the code that you're running to the code in the exa
 One common problem when creating ggplot2 graphics is to put the `+` in the wrong place: it has to come at the end of a line, not the start. In other words, make sure you haven't accidentally written code like this:
 
 ```r
-ggplot(data = mpg) 
-+ geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) 
++ geom_point()
 ```
 
 ### Help
@@ -263,7 +266,7 @@ If that doesn't help, carefully read the error message that appears when you run
 
 ### Exercise 1
 
-Run `ggplot(data = mpg)`. What do you see?
+Run `ggplot(data = mpg, aes(cty, hwy))`. What do you see?
 
 ::: {.panel-tabset}
 ## {{< fa code >}}&ensp;Interactive editor
@@ -274,11 +277,17 @@ Run `ggplot(data = mpg)`. What do you see?
 
 ```
 
+## {{< fa circle-check >}}&ensp;Solution
+
+```r
+ggplot(data = mpg, mapping = aes(cty, hwy))
+```
+
 :::
 
 
 
-Good job! A ggplot that has no layers looks blank. To finish the graph, add a geom function.
+Good job! A `ggplot` with a `data` and `mapping` arguments has the x-axis and y-axis configured, but it does not display any graphical elements. To add those, we need to add a `geom_` layers.
 
 ### Exercise 2 
 
@@ -295,24 +304,127 @@ Make a scatterplot of `cty` vs `hwy`.
 
 ## {{< fa lightbulb >}}&ensp;Hint
 
-**Hint:** Scatterplots are also called points plots and bubble plots. They use the point geom.
+**Hint:** Scatterplots are also called points plots and bubble plots. They use the `point_geom`.
 
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = cty, y = hwy))
+ggplot(data = mpg, mapping = aes(cty, hwy)) + 
+  geom_point()
 ```
 
 :::
 
+::: {.callout-note appearance="simple" icon=false .question}
+
+In the code above, we used the `mapping` argument in the `ggplot` function. Try moving the `mapping` argument to the `geom_point` layer. That is, use the chunk above to run the following code: 
+
+```{r}
+#| echo: true
+#| eval: false
+
+ggplot(data = mpg, mapping = aes(cty, hwy)) + 
+  geom_point()
+
+```
+
+**Which code produces the expected scatterplot? **
+
+```{r}
+#| label: placing aes in scatterplot
+#| echo: FALSE
+check_question(
+  answer = c(
+   "Placing the `mapping` argument in the `ggplot()`.",
+   "Placing the `mapping` argument in the `geom_point()`.", 
+   "Placing the `mapping` argument in the `ggplot()` AND in `geom_point()`."
+  ), 
+  options = c(
+   "Placing the `mapping` argument in the `ggplot()`.",
+   "Placing the `mapping` argument in the `geom_point()`.", 
+   "Placing the `mapping` argument in the `ggplot()` AND in `geom_point()`.",
+   "None of the options produces the expected scatterplot"
+  ), 
+  type = "checkbox", 
+  button_label = "Submit answer", 
+  random_answer_order = TRUE,
+  q_id = 12,
+  right = c("That's correct! All these options produce the expected result. When the `mapping` argument is within the `ggplot()` function, the `geom_` layers 'inherit' the aesthetics. ")
+)
+```
+:::
 
 
-Excellent work!
 
-### Exercise 3  
 
-What happens if you make a scatterplot of `class` vs `drv`. Try it. Why is the plot not useful?
+### Exercise 3
+
+Copy the code in exercise 2 and add a `geom_smooth()` layer to the code.
+
+::: {.panel-tabset}
+## {{< fa code >}}&ensp;Interactive editor
+
+```{webr-r}
+
+
+
+```
+
+## {{< fa lightbulb >}}&ensp;Hint
+
+**Hint:** `geom_smooth()` adds a smoothed conditional mean to the graph, aiding the eye in seeing patterns in the presence of over-plotting.
+
+## {{< fa circle-check >}}&ensp;Solution
+
+```r
+ggplot(data = mpg, mapping = aes(cty, hwy)) + 
+  geom_point() + 
+  geom_smooth()
+```
+
+:::
+
+Excellent work! Notice the warning message in red. It tells us that `geom_smooth()` did not find the argument `formula`, and so it used the default formula, linking the y-axis to the x-axis `y ~ x`.
+
+Now move the `mapping` argument to one of the layers. What do you discover?  
+
+::: {.callout-note appearance="simple" icon=false .question}
+
+
+**Where can we place the `mapping` argument?**
+
+```{r}
+#| label: placing aes with geom_smooth
+#| echo: FALSE
+check_question(
+  answer = c(
+   "The `mapping` argument should go in the `ggplot()`.", 
+   "The `mapping` argument should go into `geom_point()` AND  `geom_smooth()`."
+  ), 
+  options = c(
+   "The `mapping` argument should go in the `ggplot()`.",
+   "The `mapping` argument should go in the `geom_point()`.", 
+   "The `mapping` argument should go in the `geom_smooth()`.", 
+   "The `mapping` argument should go into `geom_point()` AND  `geom_smooth()`."
+  ), 
+  type = "checkbox", 
+  random_answer_order = FALSE,
+  button_label = "Submit answer", 
+  q_id = 13,
+  right = c("That's correct! When the `mapping` argument is within the `ggplot()` function, all the `geom_` layers 'inherit' the aesthetics. Alternatively, we will need to put the `mapping` argument in all the `geom_` layers.")
+)
+```
+:::
+
+### Exercise 4  
+
+The variable `drv` describes the type of drive train. It is a categorical variable that could have the following values: 
+
+- When it is `f` the vehicle has a front-wheel drive, 
+- When it is `r` the vehicle has a rear wheel drive, 
+- When it is `4` the vehicle has  a 4 wheel drive car. 
+
+What happens if you make a scatterplot of `class` vs `drv`? Try it. Why is the plot not useful?
 
 ::: {.panel-tabset}
 ## {{< fa code >}}&ensp;Interactive editor
@@ -326,15 +438,16 @@ What happens if you make a scatterplot of `class` vs `drv`. Try it. Why is the p
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = class, y = drv))
+ggplot(data = mpg, mapping = aes(x = class, y = drv)) + 
+  geom_point()
 ```
 
 :::
     
 ###
 
-Nice job! `class` and `drv` are both categorical variables. As a result, points can only appear at certain values, where many points overlap each other. You have no idea how many points fall on top of each other at each location. Experiment with `geom_count()` to find a better solution.
+Since `class` and `drv` are both categorical variables, points  only appear at certain values, and many points overlap each other. You have no idea how many points fall on top of each other at each location. Try replacing `geom_point()` with `geom_count()`. 
+Is this a better solution? 
 
 ##
 

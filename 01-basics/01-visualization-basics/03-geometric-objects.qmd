@@ -63,15 +63,15 @@ To change the geom in your plot, change the geom function that you add to `ggplo
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = mpg) + 
-  geom_point(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point()
 ```
 
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) + 
-  geom_smooth(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth()
 ```
 
 :::
@@ -83,13 +83,32 @@ Good job! You get the plot on the right (above).
 
 ### More about geoms
 
-ggplot2 provides over 30 geom functions that you can use to make plots, and extension packages provide even more (see <https://exts.ggplot2.tidyverse.org/gallery/> for a sampling). You'll learn how to use these geoms to explore data in the [Visualize Data]() primer. 
+ggplot2 provides over 30 geom functions that you can use to make plots, and extension packages provide even more (see <https://exts.ggplot2.tidyverse.org/gallery/> for a sampling).
 
 Until then, the best way to get a comprehensive overview of the available geoms is with the [ggplot2 cheatsheet](https://rstudio.github.io/cheatsheets/html/data-visualization.html). To learn more about any single geom, look at its help page, e.g. `?geom_smooth`.
 
 ### Exercise 1
 
 What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?
+
+
+```{r predict01, echo=FALSE}
+check_question(
+  answer = "geom_line(), geom_boxplot(), geom_histogram(), geom_area()", 
+  options = c(
+   "geom_line(), geom_boxplot(), geom_histogram(), geom_area()",
+   "geom_linechart(), boxplot(), geom_histogram(), geom_area()",
+   "geom_line(), boxplot(), geom_histogram(), geom_areachart()"
+  ), 
+  type = "radio", 
+  random_answer_order = TRUE,
+  button_label = "Submit answer", 
+  q_id = 01,
+  right = c("Correct!")
+)
+```
+
+
 
 ### Exercise 2
 
@@ -107,12 +126,24 @@ check_question(
    "Adds or removes a standard error ribbon around the smooth line"
   ), 
   type = "radio", 
+  random_answer_order = TRUE,
   button_label = "Submit answer", 
-  q_id = 1,
+  q_id = 02,
   right = c("Correct!")
 )
 ```
 :::
+
+If you are not sure how to answer the question above, try running the code below in the previous code chunk!
+
+```{r}
+#| label: geom_smooth-se
+#| echo: true
+#| eval: false
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(se = FALSE)
+```
+
 
 
 ### Putting it all together
@@ -133,8 +164,31 @@ The best way to understand the Grammar of Graphics is to see it explained in act
 
 ##
 
+Throughout this tutorial, I've referred to ggplot2 as a package. What does that mean?
+
+The R language is subdivided into __packages__, small collections of data sets and functions that all focus on a single task. The functions that we used in this tutorial come from one of those packages, the ggplot2 package, which focuses on visualizing data.
+
+### What should you know about packages?
+
+When you first install R, you get a small collection of core packages known as __base R__. The remaining packages---there are over 10,000 of them---are optional. You don't need to install them unless you want to use them.
+
+ggplot2 is one of these optional packages, so are the other packages that we will look at in these tutorials. Some of the most popular and most modern parts of R come in the optional packages.
+
+You don't need to worry about installing packages in these tutorials. Each tutorial comes with all of the packages that you need pre-installed; this is how we make the tutorials easy to use.
+
+However, one day, you may want to use R outside of these tutorials. When that day comes, you'll want to remember which packages to download to acquire the functions you use here. Throughout the tutorials, I will try to make it as clear as possible where each function comes from!
+
+
+### Where to from here
+
+Congratulations! You can use the ggplot2 code template to plot any dataset in many different ways. As you begin exploring data, you should incorporate these tools into your workflow.
+
+Your new data visualization skills will make it easier to learn other parts of R, because you can now visualize the results of any change that you make to data. you'll put these skills to immediate use in the next tutorial, which will show you how to extract values from datasets, as well as how to compute new variables and summary statistics from your data. See you there.
+
+##
+
 ```{r}
 #| echo: false
 #| results: asis
-create_buttons("04-ggplot2-package.html")
+create_buttons(NULL)
 ```

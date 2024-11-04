@@ -36,7 +36,7 @@ The tutorial focuses on three basic skills:
 1. How to add variables to a graph with **aesthetics**
 1. How to make different "types" of graphs with **geoms** 
 
-In this tutorial, we will use the [core tidyverse packages](http://tidyverse.org/), including `ggplot2`. I've already loaded the packages for you, so let's begin! 
+In this tutorial, we will use the [core tidyverse packages](http://tidyverse.org/), including `ggplot2`. I've already loaded the packages for you, so click below `next topic` to begin! 
 
 ***
 
