@@ -44,8 +44,8 @@ source(here::here("R", "helpers.R"))
 To make a bar chart with {ggplot2}, add `geom_bar()` to the [ggplot2 template](/01-basics/01-visualization-basics/01-code-template.qmd). For example, the code below plots a bar chart of the `cut` variable in the `diamonds` dataset, which comes with {ggplot2}.
 
 ```{r out.width="80%"}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut))
+ggplot(data = diamonds, mapping = aes(x = cut)) +
+  geom_bar()
 ```
 
 ### The y axis
@@ -64,8 +64,11 @@ diamonds |>
 Sometimes, you may want to map the heights of the bars not to counts, but to a variable in the data set. To do this, use `geom_col()`, which is short for column. 
 
 ```{r out.width="80%"}
-ggplot(data = pressure) +
-  geom_col(mapping = aes(x = temperature, y = pressure))
+ggplot(
+  data = pressure, 
+  mapping = aes(x = temperature, y = pressure)
+  ) +
+  geom_col()
 ```
 
 ### `geom_col()` data
@@ -92,8 +95,11 @@ Use the code chunk below to plot the distribution of the `color` variable in the
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = color))
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = color)
+  ) +
+  geom_bar()
 ```
 
 :::
@@ -102,8 +108,11 @@ ggplot(data = diamonds) +
 ### Exercise 2: Interpretation
 
 ```{r out.width="80%", echo=FALSE}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut)) + 
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = cut)
+  ) +
+  geom_bar() + 
   labs(title = "Distribution of diamond cuts")
 ```
 
@@ -159,8 +168,11 @@ Diagnose the error below and then fix the code chunk to make a plot.
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = pressure) +
-  geom_bar(mapping = aes(x = temperature, y = pressure))
+ggplot(
+  data = pressure, 
+  mapping = aes(x = temperature, y = pressure)
+  ) +
+  geom_bar()
 
 
 ```
@@ -168,8 +180,11 @@ ggplot(data = pressure) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = pressure) +
-  geom_col(mapping = aes(x = temperature, y = pressure))
+ggplot(
+  data = pressure, 
+  mapping = aes(x = temperature, y = pressure)
+  ) +
+  geom_col()
 ```
 
 :::
@@ -193,8 +208,8 @@ Recreate the bar graph of `color` from exercise one, but this time first use `co
 ```r
 diamonds |> 
   count(color) |> 
-  ggplot() +
-    geom_col(mapping = aes(x = color, y = n))
+  ggplot(mapping = aes(x = color, y = n)) +
+    geom_col()
 ```
 
 :::

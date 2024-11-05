@@ -56,8 +56,11 @@ One of these, `color`, creates the most surprising results. Predict what the cod
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, color = cut))
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = cut, color = cut)
+  ) +
+  geom_bar()
 
 
 ```
@@ -70,12 +73,18 @@ The `color` aesthetic controls the outline of each bar in your bar plot, which m
 
 ```{r echo=FALSE, out.width="100%"}
 #| layout-ncol: 2
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, color = cut), linewidth = 1) + 
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = cut, color = cut)
+  ) +
+  geom_bar(linewidth = 1) + 
   labs(title = "color = cut")
 
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = cut)) + 
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = cut, fill = cut)
+  ) +
+  geom_bar() + 
   labs(title = "fill = cut")
 ```
 
@@ -85,8 +94,11 @@ Use the code chunk below to experiment with fill, along with other `geom_bar()` 
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, color = cut))
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = cut, color = cut)
+  ) +
+  geom_bar()
 
 
 ```
@@ -102,8 +114,11 @@ You can control the width of each bar in your bar chart with the `width` paramet
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = cut, fill = cut), width = 0.9)
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = cut, fill = cut)
+  ) +
+  geom_bar(width = 0.9)
 
 
 ```
@@ -128,8 +143,11 @@ Create a colored bar chart of the `class` variable from the `mpg` data set, whic
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = mpg) +
-  geom_bar(mapping = aes(x = class, fill = class))
+ggplot(
+  data = mpg, 
+  mapping = aes(x = class, fill = class)
+  ) +
+  geom_bar()
 ```
 
 :::

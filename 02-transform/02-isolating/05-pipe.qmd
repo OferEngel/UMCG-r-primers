@@ -134,11 +134,11 @@ Note that the first argument of `ggplot()` takes a data frame, which means you c
 
 ```r
 babynames |> 
-  filter(name == "Andrew", sex == "M") |> 
+  filter(name == "Topher", sex == "M") |> 
   select(year, prop) |> 
   ggplot() +
     geom_line(aes(x = year, y = prop)) +
-    labs(title = "Popularity of the name Andrew")
+    labs(title = "Popularity of the name Topher")
 ```
 
 :::

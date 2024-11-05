@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"\n","options":{"fig-width":"6","editor-font-scale":"0.85","dpi":72,"out-height":"","comment":"","classes":"","read-only":"false","autorun":"false","context":"interactive","fig-cap":"","message":"true","warning":"true","editor-max-height":"","label":"unnamed-chunk-1","fig-height":"3.7","results":"markup","out-width":"70%","editor-quick-suggestions":"false","output":"true"},"id":1},{"code":"\n","options":{"fig-width":"6","editor-font-scale":"0.85","dpi":72,"out-height":"","comment":"","classes":"","read-only":"false","autorun":"false","context":"interactive","fig-cap":"","message":"true","warning":"true","editor-max-height":"","label":"unnamed-chunk-2","fig-height":"3.7","results":"markup","out-width":"70%","editor-quick-suggestions":"false","output":"true"},"id":2}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"\n","options":{"results":"markup","output":"true","fig-width":"6","editor-quick-suggestions":"false","label":"unnamed-chunk-1","fig-height":"3.7","out-height":"","classes":"","fig-cap":"","comment":"","autorun":"false","message":"true","editor-font-scale":"0.85","dpi":72,"out-width":"70%","warning":"true","editor-max-height":"","context":"interactive","read-only":"false"}},{"id":2,"code":"\n","options":{"results":"markup","output":"true","fig-width":"6","editor-quick-suggestions":"false","label":"unnamed-chunk-2","fig-height":"3.7","out-height":"","classes":"","fig-cap":"","comment":"","autorun":"false","message":"true","editor-font-scale":"0.85","dpi":72,"out-width":"70%","warning":"true","editor-max-height":"","context":"interactive","read-only":"false"}}];
 
 </script>
 <script type="module">
@@ -1936,11 +1936,11 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="sc">|&gt;</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Andrew"</span>, sex <span class="sc">==</span> <span class="st">"M"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(name <span class="sc">==</span> <span class="st">"Topher"</span>, sex <span class="sc">==</span> <span class="st">"M"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, prop) <span class="sc">|&gt;</span> </span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> prop)) <span class="sc">+</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Popularity of the name Andrew"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Popularity of the name Topher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>

@@ -43,8 +43,11 @@ source(here::here("R", "helpers.R"))
 You can more easily compare subgroups of data if you place each subgroup in its own subplot, a process known as **facetting.**
 
 ```{r echo=FALSE}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = color, fill = cut)) +
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = color, fill = cut)
+  ) +
+  geom_bar() +
   facet_wrap(vars(cut))
 ```
 
@@ -71,8 +74,11 @@ ggplot(data = diamonds) +
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = color)) +
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = color)
+  ) +
+  geom_bar() +
   facet_grid(cols = vars(cut))
 
 
@@ -84,8 +90,11 @@ ggplot(data = diamonds) +
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = color)) +
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = color)
+  ) +
+  geom_bar() +
   facet_grid(rows = vars(clarity))
 
 
@@ -124,8 +133,11 @@ ggplot(data = diamonds) +
 ## {{< fa circle-check >}}&ensp;Solution
 
 ```r
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = color, fill = cut)) +
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = color, fill = cut)
+  ) +
+  geom_bar() +
   facet_wrap(vars(cut))
 ```
 
@@ -146,8 +158,11 @@ Try changing the `scales` argument from `free` to `free_x` to `free_y` to see ho
 ## {{< fa code >}}&ensp;Interactive editor
 
 ```{webr-r}
-ggplot(data = diamonds) +
-  geom_bar(mapping = aes(x = color, fill = cut)) +
+ggplot(
+  data = diamonds, 
+  mapping = aes(x = color, fill = cut)
+  ) +
+  geom_bar() +
   facet_wrap(vars(cut), scales = "free")
 
 
