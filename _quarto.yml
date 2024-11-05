@@ -28,6 +28,7 @@ website:
     collapse-level: 2
     contents: 
       - section: "Basics"
+        href: 01-basics/01-visualization-basics/index.qmd
         contents: 
           - section: "Basic visualisation"
             href: 01-basics/01-visualization-basics/index.qmd

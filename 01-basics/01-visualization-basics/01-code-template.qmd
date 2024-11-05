@@ -51,7 +51,10 @@ Let's begin with a question to explore.
 
 **What do you think: Do cars with bigger engines use more fuel than cars with smaller engines?**
 
-```{r predict, echo=FALSE}
+```{r}
+#| label: q-predict
+#| echo: FALSE
+
 check_question(
   answer = c(
    "Cars with bigger engines use more fuel.",
@@ -81,8 +84,6 @@ To see the `mpg` data frame, type `mpg` in the code block below and click "Run C
 
 ```{webr-r}
 
-
-
 ```
 
 ## {{< fa circle-check >}}&ensp;Solution
@@ -97,12 +98,72 @@ mpg
 
 Good job!  We'll use interactive code chunks like this throughout these tutorials. Whenever you encounter one, you can click Run Code to run (or re-run) the code in the chunk. If there is a Solution tab, you can click it to see the answer.
 
+
 ###
+
+To see the help-page describing the `mpg` data-set, please type `?mpg` in the code chunk below, and hit Run Code. Then answer the following questions: 
+
+
+::: {.panel-tabset}
+## {{< fa code >}}&ensp;Interactive editor
+
+```{webr-r}
+
+
+
+```
+
+## {{< fa circle-check >}}&ensp;Solution
+
+```r
+?mpg
+```
+
+:::
+
+
+
+
+::: {.callout-note appearance="simple" icon=false .question}
+
+**The `mpg` dataset consists of several columns of data. What is true about those columns (choose more than one)? **
+
+```{r}
+#| label: q-mpg-help
+#| echo: FALSE
+check_question(
+  answer = c(
+   "`displ` measures engine's volume (in litres).",
+   "`cty` and `hwy` measure fuel efficiency.",
+   "`manufacturer` is a categorical variable."
+  ), 
+  options = c(
+   "`displ` measures engine's volume (in litres).",
+   "`cty` and `hwy` measure fuel efficiency.",
+   "`drv` and `class` are continuous variables.",
+   "`manufacturer` is a categorical variable."
+  ), 
+  type = "checkbox", 
+  random_answer_order = TRUE,
+  button_label = "Submit answer", 
+  
+  q_id = 2,
+  right = c("Excellent job! Mighty fine!")
+)
+```
+:::
+
+
+
+###
+
+
+
 
 Among the variables in `mpg` are:
 
 1. `displ`, a car's engine size, in liters.
-1. `hwy`, a car's fuel efficiency on the highway, in miles per gallon (mpg). A car with a low mpg consumes more fuel than a car with a high mpg when they travel the same distance.
+1. `hwy`, a car's fuel efficiency on the highway, in miles per gallon (mpg). A car with a low mpg is less efficient, needing more fuel per mile than a car with a high mpg.
 
 Now let's use this data to make our first graph.
 
@@ -127,7 +188,7 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
 **The code above uses the `mapping` argument to map data to graphical features. Which data-columns are being mapped to which graphical features? (Choose more than one option.) **
 
 ```{r}
-#| label: ggplot-mapping
+#| label: q-ggplot-mapping
 #| echo: FALSE
 check_question(
   answer = c(
@@ -143,8 +204,8 @@ check_question(
   type = "checkbox", 
   random_answer_order = TRUE,
   button_label = "Submit answer", 
-  q_id = 14,
-  right = c("That's correct! The code: `aes(x = displ, y = hwy)` is mapping the data columns `displ` to the `x-axis` and `hwy` to the `y-axis`.")
+  q_id = 3,
+  right = c("That's correct! The code: `aes(x = displ, y = hwy)` maps the data columns `displ` to the `x-axis` and `hwy` to the `y-axis`.")
 )
 ```
 :::
@@ -214,7 +275,7 @@ Our code follows the common workflow for making graphs with ggplot2. To make a g
 You may place the `mapping = aes()` argument within either
 
 - the `ggplot()` function, e.g., `ggplot(data, mapping = aes(x, y))`
-- the `geom_` layer, e.g, `geom_smooth(mapping = aes(x, y))`
+- the `geom_` layer, e.g, `geom_point(mapping = aes(x, y))`
 
 ### A graphing template
 
@@ -266,7 +327,7 @@ If that doesn't help, carefully read the error message that appears when you run
 
 ### Exercise 1
 
-Run `ggplot(data = mpg, aes(cty, hwy))`. What do you see?
+Run `ggplot(data = mpg, mapping = aes(cty, hwy))`. What do you see?
 
 ::: {.panel-tabset}
 ## {{< fa code >}}&ensp;Interactive editor
@@ -291,7 +352,9 @@ Good job! A `ggplot` with a `data` and `mapping` arguments has the x-axis and y-
 
 ### Exercise 2 
 
-Make a scatterplot of `cty` vs `hwy`.
+Make a scatter-plot of `cty` vs `hwy`. From this graph alone, which do you think is larger: a car's fuel efficiency in the city or on the highway?
+
+<!-- TODO: Quiz question  -->
 
 ::: {.panel-tabset}
 ## {{< fa code >}}&ensp;Interactive editor
@@ -323,15 +386,15 @@ In the code above, we used the `mapping` argument in the `ggplot` function. Try 
 #| echo: true
 #| eval: false
 
-ggplot(data = mpg, mapping = aes(cty, hwy)) + 
-  geom_point()
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(cty, hwy))
 
 ```
 
-**Which code produces the expected scatterplot? **
+**Which code produces the expected scatter-plot?  (choose more than one) **
 
 ```{r}
-#| label: placing aes in scatterplot
+#| label: q-place aes
 #| echo: FALSE
 check_question(
   answer = c(
@@ -348,18 +411,43 @@ check_question(
   type = "checkbox", 
   button_label = "Submit answer", 
   random_answer_order = TRUE,
-  q_id = 12,
+  q_id = 4,
   right = c("That's correct! All these options produce the expected result. When the `mapping` argument is within the `ggplot()` function, the `geom_` layers 'inherit' the aesthetics. ")
 )
 ```
 :::
 
 
-
-
 ### Exercise 3
 
-Copy the code in exercise 2 and add a `geom_smooth()` layer to the code.
+Copy the code in exercise 2, but instead of the  `geom_point()` layer, use `geom_count()` layer. What do you see? How do you explain this result?
+
+::: {.panel-tabset}
+## {{< fa code >}}&ensp;Interactive editor
+
+```{webr-r}
+
+
+
+```
+
+## {{< fa lightbulb >}}&ensp;Hint
+
+**Hint:** `geom_count()`  is similar to `geom_point()`, but it counts the number of observations at each location, then maps that number to the size of the plotted point. It useful when you have discrete data and avoids overplotting.
+
+## {{< fa circle-check >}}&ensp;Solution
+
+```r
+ggplot(data = mpg, mapping = aes(cty, hwy)) + 
+  geom_count()
+```
+
+:::
+
+
+### Exercise 4
+
+Copy the code in the exercise above and add a `geom_smooth()` layer to the code. Now run the code. What do you find?
 
 ::: {.panel-tabset}
 ## {{< fa code >}}&ensp;Interactive editor
@@ -391,10 +479,10 @@ Now move the `mapping` argument to one of the layers. What do you discover?
 ::: {.callout-note appearance="simple" icon=false .question}
 
 
-**Where can we place the `mapping` argument?**
+**Where can we place the `mapping` argument?  (choose more than one)**
 
 ```{r}
-#| label: placing aes with geom_smooth
+#| label: q-placing aes with geom_smooth
 #| echo: FALSE
 check_question(
   answer = c(
@@ -403,14 +491,14 @@ check_question(
   ), 
   options = c(
    "The `mapping` argument should go in the `ggplot()`.",
-   "The `mapping` argument should go in the `geom_point()`.", 
-   "The `mapping` argument should go in the `geom_smooth()`.", 
+   "The `mapping` argument should go in the `geom_point()` ONLY.", 
+   "The `mapping` argument should go in the `geom_smooth()` ONLY.", 
    "The `mapping` argument should go into `geom_point()` AND  `geom_smooth()`."
   ), 
   type = "checkbox", 
   random_answer_order = FALSE,
   button_label = "Submit answer", 
-  q_id = 13,
+  q_id = 5,
   right = c("That's correct! When the `mapping` argument is within the `ggplot()` function, all the `geom_` layers 'inherit' the aesthetics. Alternatively, we will need to put the `mapping` argument in all the `geom_` layers.")
 )
 ```

@@ -812,8 +812,7 @@
     "text": "Visualization is one of the most important tools for data science.\nIt is also a great way to start learning R; when you visualize data, you get an immediate payoff that will keep you motivated as you learn. After all, learning a new language can be hard!\nThis tutorial will teach you how to visualize data with R’s most popular visualization package, ggplot2.\nThe tutorial focuses on three basic skills:\nIn this tutorial, we will use the core tidyverse packages, including ggplot2. I’ve already loaded the packages for you, so click below next topic to begin!\nThese examples are excerpted from R for Data Science by Hadley Wickham and Garrett Grolemund, published by O’Reilly Media, Inc., 2016, ISBN: 9781491910399. You can purchase the book at shop.oreilly.com.",
     "crumbs": [
       "About",
-      "Basics",
-      "Basic visualisation"
+      "Basics"
     ]
   },
   {
@@ -824,8 +823,7 @@
     "text": "Continue\n\nNext topic Start over",
     "crumbs": [
       "About",
-      "Basics",
-      "Basic visualisation"
+      "Basics"
     ]
   },
   {
@@ -881,8 +879,8 @@
     ]
   },
   {
-    "objectID": "01-basics/01-visualization-basics/01-code-template.html#section-5",
-    "href": "01-basics/01-visualization-basics/01-code-template.html#section-5",
+    "objectID": "01-basics/01-visualization-basics/01-code-template.html#section-6",
+    "href": "01-basics/01-visualization-basics/01-code-template.html#section-6",
     "title": "A code template",
     "section": "",
     "text": "Continue\n\nNext topic Start over",
