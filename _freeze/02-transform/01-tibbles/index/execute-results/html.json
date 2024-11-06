@@ -1,0 +1,15 @@
+{
+  "hash": "6fcc5a22fcaa7544b391f47340da09a7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Working with tibbles\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\n\nIn this primer, you will explore the popularity of different names over time. To succeed, you will need to master some common tools for manipulating data with R:\n\n* tibbles and `View()`, which let you inspect raw data\n* `select()` and `filter()`, which let you extract rows and columns from a data frame\n* `arrange()`, which lets you reorder the rows in your data\n* `|>`, which organizes your code into reader-friendly \"pipes\"\n* `mutate()`, `group_by()`, and `summarize()`, which help you use your data to compute new variables and summary statistics\n\nThese are some of the most useful R functions for data science, and the tutorials that follow will provide you everything you need to learn them. \n\nIn the tutorials, we'll use a dataset named `babynames`, which comes in a package that is also named `babynames`. Within `babynames`, you will find information about almost every name given to children in the United States since 1880. \n\nThis tutorial introduces `babynames` as well as a new data structure that makes working with data in R easy: the tibble.\n\nIn addition to `babynames`, this tutorial uses the [core tidyverse packages](http://tidyverse.org/), including {ggplot2}, {tibble}, and {dplyr.} All of these packages have been pre-installed for your convenience. But they haven't been pre-loaded---something you will soon learn more about!\n\n\n##\n\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-babynames.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

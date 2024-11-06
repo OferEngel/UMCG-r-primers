@@ -1,0 +1,15 @@
+{
+  "hash": "dbac02d098af4893b34eff25160b08c5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Programming basics\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\n\n### Welcome to R! {.no-hide}\n\nR is easiest to use when you know how the R language works. This tutorial will teach you the implicit background knowledge that informs every piece of R code. You'll learn about:\n\n* **functions** and their **arguments**\n* **objects**\n* R's basic **data types** \n* R's basic data structures including **vectors** and **lists**\n* R's **package system**\n\n##\n\n\n\n\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-functions.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

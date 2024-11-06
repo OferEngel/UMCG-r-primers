@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + \n  geom_point()","id":1,"options":{"message":"true","fig-width":"6","label":"unnamed-chunk-1","editor-quick-suggestions":"false","out-width":"70%","fig-cap":"","comment":"","read-only":"false","dpi":72,"out-height":"","editor-max-height":"","results":"markup","warning":"true","autorun":"false","classes":"","context":"interactive","fig-height":"3.7","output":"true","editor-font-scale":"0.85"}}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + \n  geom_point()","options":{"editor-font-scale":"0.85","context":"interactive","label":"unnamed-chunk-1","out-width":"70%","message":"true","dpi":72,"fig-cap":"","editor-max-height":"","fig-width":"6","warning":"true","read-only":"false","output":"true","autorun":"false","comment":"","classes":"","editor-quick-suggestions":"false","fig-height":"3.7","results":"markup","out-height":""}}];
 
 </script>
 <script type="module">
@@ -1199,7 +1199,7 @@ globalThis.qwebrExecuteCode = async function (
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a href="../../01-basics/01-visualization-basics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1885,11 +1885,11 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <input type="radio" name="answer_1" id="answer_1_1" value="geom_linechart(), boxplot(), geom_histogram(), geom_area()">
 <label>geom_linechart(), boxplot(), geom_histogram(), geom_area()</label>
 <br>
-<input type="radio" name="answer_1" id="answer_1_2" value="geom_line(), geom_boxplot(), geom_histogram(), geom_area()">
-<label>geom_line(), geom_boxplot(), geom_histogram(), geom_area()</label>
-<br>
-<input type="radio" name="answer_1" id="answer_1_3" value="geom_line(), boxplot(), geom_histogram(), geom_areachart()">
+<input type="radio" name="answer_1" id="answer_1_2" value="geom_line(), boxplot(), geom_histogram(), geom_areachart()">
 <label>geom_line(), boxplot(), geom_histogram(), geom_areachart()</label>
+<br>
+<input type="radio" name="answer_1" id="answer_1_3" value="geom_line(), geom_boxplot(), geom_histogram(), geom_area()">
+<label>geom_line(), geom_boxplot(), geom_histogram(), geom_area()</label>
 <br>
 <input type="submit" value="Submit answer">
 <div id="result_1"></div>
@@ -1917,14 +1917,14 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <input type="radio" name="answer_2" id="answer_2_1" value="controls whether or not to **s**how **e**rrors">
 <label>controls whether or not to **s**how **e**rrors</label>
 <br>
-<input type="radio" name="answer_2" id="answer_2_2" value="Nothing. `se` is not an argument of `geom_smooth()`">
-<label>Nothing. `se` is not an argument of `geom_smooth()`</label>
-<br>
-<input type="radio" name="answer_2" id="answer_2_3" value="Adds or removes a standard error ribbon around the smooth line">
+<input type="radio" name="answer_2" id="answer_2_2" value="Adds or removes a standard error ribbon around the smooth line">
 <label>Adds or removes a standard error ribbon around the smooth line</label>
 <br>
-<input type="radio" name="answer_2" id="answer_2_4" value="chooses a method for calculating the smooth line">
+<input type="radio" name="answer_2" id="answer_2_3" value="chooses a method for calculating the smooth line">
 <label>chooses a method for calculating the smooth line</label>
+<br>
+<input type="radio" name="answer_2" id="answer_2_4" value="Nothing. `se` is not an argument of `geom_smooth()`">
+<label>Nothing. `se` is not an argument of `geom_smooth()`</label>
 <br>
 <input type="submit" value="Submit answer">
 <div id="result_2"></div>

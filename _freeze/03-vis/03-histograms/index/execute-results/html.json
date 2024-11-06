@@ -1,0 +1,15 @@
+{
+  "hash": "ef621a1e1469545899c493a6e5711a90",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Histograms\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\n**Histograms** are the most popular way to visualize continuous distributions. Here we will look at them and their derivatives. You will learn how to:\n\n* Make and interpret histograms\n* Adjust the **binwidth** of a histogram to reveal new information\n* Use geoms that are similar to histograms, such as __dotplots__, __frequency polygons__, and __densities__\n\nThe tutorial is adapted from [_R for Data Science_](https://r4ds.had.co.nz/) by Hadley Wickham and Garrett Grolemund, published by O’Reilly Media, Inc., 2016, ISBN: 9781491910399. You can purchase the book at [shop.oreilly.com](http://shop.oreilly.com/product/0636920034407.do).\n\nThe tutorial uses the {ggplot2} and {dplyr} packages, which have been pre-loaded for your convenience.\n\n\n##\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-histograms.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

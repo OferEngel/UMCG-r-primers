@@ -1,0 +1,15 @@
+{
+  "hash": "e07cb56a31de8b6bec4e36cd37b0c911",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Exploratory data analysis\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\n\nThis tutorial will show you how to explore your data in a systematic way, a task that statisticians call **exploratory data analysis**, or **EDA** for short. In the tutorial you will:\n\n* Learn a strategy for exploring data\n* Practice finding patterns in data\n* Get tips about how to use different types of plots to explore data\n\nThe tutorial is excerpted from _R for Data Science_ by Hadley Wickham and Garrett Grolemund, published by O’Reilly Media, Inc., 2016, ISBN: 9781491910399. You can purchase the book at [shop.oreilly.com](http://shop.oreilly.com/product/0636920034407.do).\n\n\n##\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-eda.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

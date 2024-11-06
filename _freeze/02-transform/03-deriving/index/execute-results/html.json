@@ -1,0 +1,15 @@
+{
+  "hash": "dde4c3c8e9a830953e3c3e4d66261bf8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Deriving information with {dplyr}\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\n\nIn this case study, you will identify the most popular American names from 1880 to 2015. While doing this, you will master three more dplyr functions:\n\n* `mutate()`, `group_by()`, and `summarize()`, which help you use your data to compute new variables and summary statistics\n\nThese are some of the most useful R functions for data science, and this tutorial provides everything you need to learn them. \n\nThis tutorial uses the [core tidyverse packages](http://tidyverse.org/), including {ggplot2}, {tibble}, and {dplyr}, as well as the `babynames` package. All of these packages have been pre-installed and pre-loaded for your convenience.\n\n\n##\n\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-most-popular-names.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

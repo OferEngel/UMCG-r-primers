@@ -5,6 +5,7 @@
 
 /.quarto/
 _site/
-_freeze/
+# _freeze/
 **_cache/
 # **_files/
+*.txt

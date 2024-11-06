@@ -1,0 +1,15 @@
+{
+  "hash": "7c37f2321e2da33f7c9eb88d9cd1254a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Data visualization basics\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n          <script src=\"/js/bootstrapify.js\"></script>\n---\n\n\n\n\n\n\nVisualization is one of the most important tools for data science. \n\nIt is also a great way to start learning R; when you visualize data, you get an immediate payoff that will keep you motivated as you learn. After all, learning a new language can be hard!\n\nThis tutorial will teach you how to visualize data with R's most popular visualization package, `ggplot2`.\n\n\nThe tutorial focuses on three basic skills:\n\n1. How to create graphs with a reusable **template**\n1. How to add variables to a graph with **aesthetics**\n1. How to make different \"types\" of graphs with **geoms** \n\nIn this tutorial, we will use the [core tidyverse packages](http://tidyverse.org/), including `ggplot2`. I've already loaded the packages for you, so click below `next topic` to begin! \n\n***\n\nThese examples are excerpted from _R for Data Science_ by Hadley Wickham and Garrett Grolemund, published by O’Reilly Media, Inc., 2016, ISBN: 9781491910399. You can purchase the book at [shop.oreilly.com](http://shop.oreilly.com/product/0636920034407.do).\n\n\n##\n\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-code-template.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

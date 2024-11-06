@@ -1,0 +1,17 @@
+{
+  "hash": "28be30cf111c1a4764021c5b82c03f75",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Aesthetics\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n          <script src=\"/js/bootstrapify.js\"></script>\n\nengine: knitr\nfilters:\n  - webr\nwebr:\n  packages:\n    - ggplot2\n    - dplyr\n  cell-options:\n    editor-font-scale: 0.85\n    fig-width: 6\n    fig-height: 3.7\n    out-width: \"70%\"\n---\n\n\n\n\n\n\n\n### Aesthetics for bars {.no-hide}\n\n`geom_bar()` and `geom_col()` can use several aesthetics:\n\n* `alpha`\n* `color`\n* `fill`\n* `linetype`\n* `size`\n\nOne of these, `color`, creates the most surprising results. Predict what the code below will return and then run it.\n\n::: {.panel-tabset}\n## {{< fa code >}}&ensp;Interactive editor\n\n```{webr-r}\nggplot(\n  data = diamonds, \n  mapping = aes(x = cut, color = cut)\n  ) +\n  geom_bar()\n\n\n```\n\n:::\n\n### `fill`\n\nThe `color` aesthetic controls the outline of each bar in your bar plot, which may not be what you want. To color the interior of each bar, use the `fill` aesthetic:\n\n\n\n\n::: {.cell layout-ncol=\"2\" layout-align=\"center\"}\n::: {.cell-output-display}\n![](05-aesthetics_files/figure-html/unnamed-chunk-2-1.png){fig-align='center' width=100%}\n:::\n\n::: {.cell-output-display}\n![](05-aesthetics_files/figure-html/unnamed-chunk-2-2.png){fig-align='center' width=100%}\n:::\n:::\n\n\n\n\nUse the code chunk below to experiment with fill, along with other `geom_bar()` aesthetics, like `alpha`, `linetype`, and `size`.\n\n::: {.panel-tabset}\n## {{< fa code >}}&ensp;Interactive editor\n\n```{webr-r}\nggplot(\n  data = diamonds, \n  mapping = aes(x = cut, color = cut)\n  ) +\n  geom_bar()\n\n\n```\n\n:::\n\n\n### Width\n\nYou can control the width of each bar in your bar chart with the `width` parameter. In the chunk below, set `width = 1`, then `width = 0.5`. Can you spot the difference?\n\n::: {.panel-tabset}\n## {{< fa code >}}&ensp;Interactive editor\n\n```{webr-r}\nggplot(\n  data = diamonds, \n  mapping = aes(x = cut, fill = cut)\n  ) +\n  geom_bar(width = 0.9)\n\n\n```\n\n:::\n\nNotice that width is a _parameter_, not an aesthetic mapping. Hence, you should set width _outside_ of the `aes()` function.\n\n### Exercise 5: Aesthetics\n\nCreate a colored bar chart of the `class` variable from the `mpg` data set, which comes with ggplot2. Map the interior color of each bar to `class`.\n\n::: {.panel-tabset}\n## {{< fa code >}}&ensp;Interactive editor\n\n```{webr-r}\n\n\n\n```\n\n## {{< fa circle-check >}}&ensp;Solution\n\n```r\nggplot(\n  data = mpg, \n  mapping = aes(x = class, fill = class)\n  ) +\n  geom_bar()\n```\n\n:::\n\n\n##\n\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"06-position-adjustments.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [
+      "05-aesthetics_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

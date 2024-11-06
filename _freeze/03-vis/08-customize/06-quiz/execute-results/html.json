@@ -1,0 +1,17 @@
+{
+  "hash": "d4b8c47655c3fb40ff0185679a6b7b18",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quiz\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n\nengine: knitr\nfilters:\n  - webr\nwebr:\n  packages:\n    - ggplot2\n  cell-options:\n    editor-font-scale: 0.85\n    fig-width: 6\n    fig-height: 3.7\n    out-width: \"70%\"\n---\n\n\n\n\n\nIn this tutorial, you learned how to customize the graphs that you make with ggplot2 in several ways. You learned how to:\n\n* Zoom in on regions of the graph\n* Add titles, subtitles, and annotations\n* Add themes\n* Add color scales\n* Adjust legends\n\nTo cement your skills, combine what you've learned to recreate the plot below.\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](06-quiz_files/figure-html/unnamed-chunk-2-1.png){fig-align='center' width=70%}\n:::\n:::\n\n\n\n::: {.panel-tabset}\n## {{< fa code >}}&ensp;Interactive editor\n\n```{webr-r}\n\n\n\n```\n\n## {{< fa circle-check >}}&ensp;Solution\n\n```r\nggplot(data = diamonds, mapping = aes(x = carat, y = price)) +\n  geom_point() + \n  geom_smooth(mapping = aes(color = cut), se = FALSE) +  \n  labs(title = \"Ideal cut diamonds command the best price for every carat size\",\n       subtitle = \"Lines show GAM estimate of mean values for each level of cut\",\n       caption = \"Data provided by Hadley Wickham\",\n       x = \"Log Carat Size\",\n       y = \"Log Price Size\",\n       color = \"Cut Rating\") +\n  scale_x_log10() +\n  scale_y_log10() +\n  scale_color_brewer(palette = \"Greens\") +\n  theme_light()\n```\n\n:::\n\n##\n\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [
+      "06-quiz_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "hash": "2b616d74771d7bc1653ee33fcaf3f451",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Overplotting\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\n\nData visualization is a useful tool because it makes data accessible to your visual system, which can process large amounts of information quickly. However, two characteristics of data can short circuit this system. Data can not be easily visualized if\n\n1. Data points are all rounded to the same values.\n2. The data contains so many points that they occlude each other.\n\nThese features both create _overplotting_, the condition where multiple geoms in the plot are plotted on top of each other, hiding each other. This tutorial will show you several strategies for dealing with overplotting, introducing new geoms along the way.\n\n\n### What is overplotting? {.no-hide}\n\nYou've seen this plot several times in previous tutorials, but have you noticed that it only displays 126 points? This is unusual because the plot visualizes a data set that contains 234 points.\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](01-overplotting_files/figure-html/unnamed-chunk-2-1.png){fig-align='center' width=80%}\n:::\n:::\n\n\n\nThe missing points are hidden behind other points, a phenomenon known as _overplotting_. Overplotting is a problem because it provides an incomplete picture of the dataset. You cannot determine where the *mass* of the points fall, which makes it difficult to spot relationships in the data. \n\n### Causes of overplotting\n\nOverplotting usually occurs for two different reasons:\n\n1. The data points have been rounded to a \"grid\" of common values, as in the plot above\n2. The dataset is so large that it cannot be plotted without points overlapping each other\n\nHow you deal with overplotting will depend on the cause. \n\n\n##\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"02-rounding.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [
+      "01-overplotting_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "hash": "0f2272a9147b8fc479d9a2210a1a83f0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Scatterplots\"\nformat:\n  html: \n    toc: false\n    section-divs: true\n    include-after-body: \n      - text: |\n          <script src=\"/js/progressive-reveal.js\"></script>\n---\n\n\n\n\n\nA **scatterplot** displays the relationship between two continuous variables. Scatterplots are one of the most common types of graphs---in fact, you've met scatterplots already in [Visualization Basics](/basics/01-visualization-basics/). \n\nIn this tutorial, you'll learn how to:\n\n* Make new types of scatterplots with `geom_text()` and `geom_jitter()`\n* Add multiple **layers** of geoms to a plot\n* Enhance scatterplots with `geom_smooth()`, `geom_rug()`, and `geom_repel()`\n* Change the **coordinate system** of a plot\n\nThe tutorial is adapted from [_R for Data Science_](https://r4ds.had.co.nz/) by Hadley Wickham and Garrett Grolemund, published by O’Reilly Media, Inc., 2016, ISBN: 9781491910399. You can purchase the book at [shop.oreilly.com](http://shop.oreilly.com/product/0636920034407.do).\n\nThe tutorial uses the {ggplot2}, {ggrepel}, and {dplyr} packages, which have been pre-loaded for your convenience.\n\n\n##\n\n\n\n::: {.cell layout-align=\"center\"}\n<section id=\"buttons\">\n<button id=\"continueButton\" class=\"btn btn-primary float-start me-2\">Continue</button>\n<a id=\"nextTopicButton\" class=\"btn btn-danger disabled\" href=\"01-scatterplots.html\" role=\"button\">Next topic</a>\n<button id=\"resetButton\" class=\"btn btn-outline-warning btn-sm float-end\">Start over</button>\n</section>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

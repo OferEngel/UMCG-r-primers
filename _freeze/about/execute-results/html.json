@@ -1,0 +1,15 @@
+{
+  "hash": "0c5c971d1aae53448b5d546dbac12835",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"About\"\nsidebar: false\n\nengine: knitr\nfilters:\n  - webr\nwebr:\n  cell-options:\n    editor-font-scale: 0.85\n    fig-width: 6\n    fig-height: 3.7\n    out-width: \"70%\"\n---\n\n\n\n\n## A brief (and probably inaccurate) history of the RStudio/Posit Primers\n\nIn 2018, Garrett Grolemund (co-author of [*R for Data Science*](https://r4ds.had.co.nz/)) created the RStudio Primers—a set of free interactive [{learnr}](https://rstudio.github.io/learnr/) apps to teach R to the public. These were hosted on a [Shiny](https://shiny.posit.co/) server maintained by RStudio and accessible through RStudio.cloud.\n\nWith [RStudio's rebranding to Posit in 2022](https://posit.co/blog/rstudio-is-becoming-posit/), the lessons became the Posit Primers and remained accessible through [Posit.cloud](https://posit.cloud/).\n\nIn December 2023, the Posit Primers were retired in favor of [Posit Recipes](https://posit.cloud/learn/recipes) and [Posit Cheatsheets](https://posit.co/resources/cheatsheets/). These newer resources have been updated to the latest versions of {tidyverse} packages, and they're no longer interactive (which is probably a lot easier for Posit's education team to maintain).\n\nFor more about how these Primers were used in the past for teaching, please read [Andrew's about page](https://r-primers.andrewheiss.com/about.html)\n\n## Legal stuff\n\nThe original primers were developed by the RStudio/Posit Education Team and made [open source on GitHub](https://github.com/rstudio-education/primers). Following the original license, these tutorials are licensed under the Creative Commons Attribution-ShareAlike 4.0 License (CC BY-SA 4.0).\n\nThe primers are derived from the book [*R for Data Science*](https://r4ds.had.co.nz/) from O'Reilly Media, Inc. Copyright © 2017 Garrett Grolemund, Hadley Wickham. Used with permission.\n\n[See here for the full license.](https://github.com/andrewheiss/r-primers/blob/main/LICENSE.md)\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

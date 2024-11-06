@@ -306,7 +306,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"out-height":"","context":"interactive","editor-max-height":"","fig-cap":"","warning":"true","classes":"","output":"true","results":"markup","comment":"","autorun":"false","fig-height":"3.7","label":"unnamed-chunk-1","editor-font-scale":"0.85","message":"true","read-only":"false","fig-width":"6","dpi":72,"out-width":"70%","editor-quick-suggestions":"false"},"code":"select(babynames, name, sex)\n","id":1},{"options":{"out-height":"","context":"interactive","editor-max-height":"","fig-cap":"","warning":"true","classes":"","output":"true","results":"markup","comment":"","autorun":"false","fig-height":"3.7","label":"unnamed-chunk-2","editor-font-scale":"0.85","message":"true","read-only":"false","fig-width":"6","dpi":72,"out-width":"70%","editor-quick-suggestions":"false"},"code":"select(babynames, -c(n, prop))\n","id":2}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"select(babynames, name, sex)\n","options":{"fig-width":"6","out-height":"","editor-quick-suggestions":"false","read-only":"false","warning":"true","autorun":"false","editor-font-scale":"0.85","editor-max-height":"","output":"true","label":"unnamed-chunk-1","fig-cap":"","message":"true","results":"markup","context":"interactive","comment":"","out-width":"70%","fig-height":"3.7","classes":"","dpi":72}},{"id":2,"code":"select(babynames, -c(n, prop))\n","options":{"fig-width":"6","out-height":"","editor-quick-suggestions":"false","read-only":"false","warning":"true","autorun":"false","editor-font-scale":"0.85","editor-max-height":"","output":"true","label":"unnamed-chunk-2","fig-cap":"","message":"true","results":"markup","context":"interactive","comment":"","out-width":"70%","fig-height":"3.7","classes":"","dpi":72}}];
 
 </script>
 <script type="module">
@@ -1199,7 +1199,7 @@ globalThis.qwebrExecuteCode = async function (
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a href="../../01-basics/01-visualization-basics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1926,17 +1926,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <form name="form_1" onsubmit="return validate_form_1()" method="post">
-<input type="radio" name="answer_1" id="answer_1_1" value="select(babynames, one_of(c(&quot;name&quot;, &quot;n&quot;, &quot;chengy&quot;)))">
-<label>select(babynames, one_of(c("name", "n", "chengy")))</label>
+<input type="radio" name="answer_1" id="answer_1_1" value="select(babynames, -c(year, sex, prop))">
+<label>select(babynames, -c(year, sex, prop))</label>
 <br>
 <input type="radio" name="answer_1" id="answer_1_2" value="select(babynames, starts_with(&quot;n&quot;))">
 <label>select(babynames, starts_with("n"))</label>
 <br>
-<input type="radio" name="answer_1" id="answer_1_3" value="select(babynames, -c(year, sex, prop))">
-<label>select(babynames, -c(year, sex, prop))</label>
-<br>
-<input type="radio" name="answer_1" id="answer_1_4" value="select(babynames, ends_with(&quot;n&quot;))">
+<input type="radio" name="answer_1" id="answer_1_3" value="select(babynames, ends_with(&quot;n&quot;))">
 <label>select(babynames, ends_with("n"))</label>
+<br>
+<input type="radio" name="answer_1" id="answer_1_4" value="select(babynames, one_of(c(&quot;name&quot;, &quot;n&quot;, &quot;chengy&quot;)))">
+<label>select(babynames, one_of(c("name", "n", "chengy")))</label>
 <br>
 <input type="radio" name="answer_1" id="answer_1_5" value="select(babynames, name:n)">
 <label>select(babynames, name:n)</label>
